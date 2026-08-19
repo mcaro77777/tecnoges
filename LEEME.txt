@@ -1,0 +1,27 @@
+TECNOGES — SITIO WEB FUTURISTA
+================================
+
+Contenido:
+- index.html
+- tecnoges-hero.mp4
+- tecnoges-hero.webm
+- tecnoges-poster.jpg
+
+PRUEBA LOCAL
+1. Descomprime el archivo ZIP.
+2. Mantén todos los archivos en la misma carpeta.
+3. Abre index.html con Google Chrome, Edge o Firefox.
+
+PUBLICACIÓN
+Sube los cuatro archivos principales al directorio público del hosting,
+manteniendo sus nombres y ubicándolos juntos.
+
+CORREO DEL FORMULARIO
+El formulario está configurado con contacto@tecnoges.cl.
+Para cambiarlo, abre index.html con un editor de texto, busca esa dirección
+y reemplázala por el correo definitivo.
+
+El formulario abre la aplicación de correo del visitante. Para recibir mensajes
+directamente desde el sitio será necesario conectarlo posteriormente con una API,
+un servicio de formularios o un servidor de correo.
+
