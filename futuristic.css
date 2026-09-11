@@ -125,3 +125,52 @@ body{background:#160a10;color:#fffafa}
 .whatsapp-preview{border-color:#c9ddd2;background:#edf6f1}.footer{border-top-color:#e99ba129;background:#15090f}
 @media(max-width:1000px){.hero-backdrop:after{background:linear-gradient(90deg,#160a10f3,#24101aa8 60%,#160a1042),linear-gradient(0deg,#160a10,transparent 70%)}}
 @media(max-width:760px){.hero-backdrop:after{background:linear-gradient(90deg,#160a10df,#2c101a78),linear-gradient(0deg,#160a10,transparent 90%)}.links{background:#1c0d15f5}}
+
+/* Clarity pass: cleaner neutrals, stronger coral and less color haze. */
+:root{--bg:#101114;--panel:#211417;--ink:#fff;--muted:#c8c5c6;--purple:#de6267;--line:#ffffff24;--surface:#fff;--surface-soft:#f6f5f4;--ink:#fff;--ink-muted:#767274}
+body{background:#101114}
+.header,.header.scrolled{background:#111316f7;border-bottom-color:#ffffff18;box-shadow:0 8px 28px #00000038}
+.mark{border-color:#df6d728f;background:linear-gradient(145deg,#8a4145,#231417);box-shadow:inset 0 1px 0 #ffffff35,0 0 18px #d75b6328}
+.links{color:#eee9ea}.links a:hover,.links a.active{color:#ed777c}
+.nav>.button.secondary{background:#1a1719;border-color:#df74794f}.nav>.button.secondary:hover{background:#352023;border-color:#eb7d8280}
+.hero{background:#111214}
+.hero-backdrop{background-color:#221013;background-blend-mode:soft-light}
+.hero-backdrop video{opacity:1;filter:hue-rotate(52deg) saturate(1.08) contrast(1.24) brightness(.98)}
+.hero-backdrop:after{background:linear-gradient(90deg,#111214f8 0%,#111214e4 24%,#11121482 49%,#11121420 76%,#11121408 100%),linear-gradient(0deg,#111214 0%,#1112145c 15%,transparent 52%)}
+.hero:after{background:radial-gradient(ellipse at 14% 48%,#e3545f20,transparent 42%)}
+.hero .eyebrow{color:#ff9a9e;font-weight:750;text-shadow:0 1px 12px #000}.hero .eyebrow:before{background:#ff777d;box-shadow:0 0 9px #ff777d,0 0 18px #e65c64}
+.hero h1{color:#fff;text-shadow:0 3px 16px #0000008c}.hero h1 span{background:linear-gradient(105deg,#f09c9e 0%,#e26b70 45%,#cf4f58 100%);background-clip:text;-webkit-background-clip:text;color:transparent;text-shadow:none}
+.hero-copy{color:#f0eded;font-weight:430;text-shadow:0 2px 8px #000}.hero-note{color:#ded9da}
+.button:not(.secondary):not(:disabled){background:#dc6268;border-color:#f28c91;box-shadow:0 9px 25px #b434424d,inset 0 1px 0 #ffffff4d}
+.button:not(.secondary):not(:disabled):hover{background:#c94d56;border-color:#f09498;box-shadow:0 11px 30px #bf354753}
+.button.secondary{background:#151518dc;border-color:#ffffff36}.button.secondary:hover{background:#242024;border-color:#df777d80}
+.motion-control{background:#151518e8;border-color:#ffffff38;color:#f2eeee}.motion-control:before{color:#ef757b}
+.hero-product{background:#16171b;border-color:#ed777d85;box-shadow:0 0 0 1px #ffffff12,0 0 45px #dd59652c,0 30px 70px #000000d9}
+.hero-product:hover{box-shadow:0 0 0 1px #ffffff1f,0 0 58px #e35f6a38,0 34px 78px #000000e6}
+.hero-product .product-bar{background:#17191d;border-bottom-color:#ffffff18}.hero-product .product-bar span:last-child{color:#45c58c}
+.proof{border-bottom-color:#ffffff24;color:#efeaeb}.proof span{color:#ef747a}
+.light{background:#fff;color:#252326;--muted:#757274;--line:#2f292b1b}
+.light .eyebrow,.light .number{color:#d95a61}
+.section-head p,.solution p{color:#747173}
+.solution{background:#fff;border-color:#ddd8d9;box-shadow:0 12px 30px #27191c0a}
+.solution:hover{border-color:#df777c;box-shadow:0 19px 38px #80303d17}.solution li{border-color:#ebe7e8}.solution li:before{color:#df6268}
+.product-section{background:radial-gradient(ellipse at 8% 0,#7c28362b,transparent 42%),#151316;color:#fff;--muted:#c9c3c5}
+.product-section .eyebrow.green{color:#ed777c}
+.product-tabs{background:#17191deF;border-color:#ffffff25;box-shadow:0 14px 28px #0008,inset 0 1px #ffffff12}.product-tabs:before{color:#ef858a;opacity:1}
+.product-tabs button{color:#e9e4e5}.product-tabs button:hover{border-color:#df777c}.product-tabs button[aria-selected=true]{background:#d85b62;border-color:#ed858a;color:#fff;box-shadow:0 7px 16px #861f2c5c,inset 0 1px #ffffff35}
+.product-view{background:#17191d;border-color:#e76f758a;box-shadow:0 0 0 1px #ffffff14,0 0 38px #d84f5d28,0 30px 55px #000c}
+.product-view:hover{box-shadow:0 0 0 1px #ffffff22,0 0 48px #df586538,0 34px 65px #000e}
+.product-view:before{background:linear-gradient(135deg,#e46c7438,#49182020 48%,#0c0d10);box-shadow:0 20px 30px #000d}
+.product-view:after{background:linear-gradient(120deg,#ffffff18,transparent 13%,transparent 80%,#e8606914)}
+.product-view .screen{background:#0d0f12;box-shadow:inset 0 0 0 1px #ffffff14}.product-view .screen img{filter:saturate(1.05) contrast(1.06)}
+.product-view .screen:before{color:#fff;background:#d85a62e6;border-radius:4px;padding:4px 7px;text-shadow:none;box-shadow:0 3px 12px #4d131d66}
+.product-caption{background:#17191d;color:#fff;border-top-color:#ffffff1c}.product-caption p{color:#c6c1c2}.product-caption .text-link{color:#f18287}.caption-note{color:#c4bfc0}
+.flow{color:#f0dcde}.flow span{background:#ffffff06;border-color:#ffffff1e}
+#nosotros{background:radial-gradient(ellipse at 0% 50%,#a52f4024,transparent 52%),#111214}.principle{border-color:#ffffff20}.principle>span{color:#ff858a;background:#d95b6319;border-color:#e572783d}
+.process article,.process article:nth-child(even){background:#fff;border-color:#ddd8d9;box-shadow:0 10px 26px #25181b0a}
+#modelo{background:radial-gradient(ellipse at 84% 18%,#a5324225,transparent 50%),#111214}
+.price-box{background:#19191d;border-color:#e66d7482;box-shadow:0 0 36px #d54a5924,inset 0 1px 0 #ffffff1c}.price-box .price{background:linear-gradient(100deg,#fff,#f08388);background-clip:text;-webkit-background-clip:text;color:transparent}.price-box .price small{color:#d8d1d2}
+.contact-form{background:#fff;border-color:#ddd8d9;box-shadow:0 18px 50px #361c2110}.contact-email{border-bottom-color:#d9575e;color:#be414a}.coming-soon{background:#f8d7d9;color:#a83741}
+.footer{background:#111214;border-top-color:#ffffff1c}
+@media(max-width:1000px){.hero-backdrop:after{background:linear-gradient(90deg,#111214f5,#111214c0 55%,#11121445),linear-gradient(0deg,#111214,transparent 65%)}}
+@media(max-width:760px){.hero-backdrop video{filter:hue-rotate(52deg) saturate(1.04) contrast(1.18) brightness(.92)}.hero-backdrop:after{background:linear-gradient(90deg,#111214e8,#11121473),linear-gradient(0deg,#111214,transparent 82%)}.links{background:#111316fa}}
