@@ -1,27 +1,16 @@
-TECNOGES — SITIO WEB FUTURISTA
-================================
+﻿TECNOGES — SITIO WEB
 
-Contenido:
-- index.html
-- tecnoges-hero.mp4
-- tecnoges-hero.webm
-- tecnoges-poster.jpg
+Página principal: index.html
+Estilos: styles.css
+Interacciones: site.js
+Imágenes: assets/sisfru-*-demo.png (versiones adaptadas con datos ficticios)
 
-PRUEBA LOCAL
-1. Descomprime el archivo ZIP.
-2. Mantén todos los archivos en la misma carpeta.
-3. Abre index.html con Google Chrome, Edge o Firefox.
+Preparar la versión estática: node build.mjs
+Salida de publicación: dist/
+La configuración existente de Sites se conserva en .openai/hosting.json.
+Docker utiliza index.html, styles.css, site.js y assets/.
 
-PUBLICACIÓN
-Sube los cuatro archivos principales al directorio público del hosting,
-manteniendo sus nombres y ubicándolos juntos.
-
-CORREO DEL FORMULARIO
-El formulario está configurado con contacto@tecnoges.cl.
-Para cambiarlo, abre index.html con un editor de texto, busca esa dirección
-y reemplázala por el correo definitivo.
-
-El formulario abre la aplicación de correo del visitante. Para recibir mensajes
-directamente desde el sitio será necesario conectarlo posteriormente con una API,
-un servicio de formularios o un servidor de correo.
-
+El formulario y WhatsApp son presentaciones visuales desactivadas, a petición del propietario.
+No recogen datos ni envían mensajes. El enlace directo de correo existente se conserva.
+Para habilitarlos se deben configurar el número comercial y un servicio de recepción.
+Las capturas originales con información de clientes no se incluyen en assets/.
