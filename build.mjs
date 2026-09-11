@@ -6,7 +6,7 @@ const html=await readFile(path.join(root,'index.html'),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
 if(new Set(ids).size!==ids.length)throw new Error('Duplicate HTML identifiers');
 for(const [,id] of html.matchAll(/(?:href="#|aria-controls=")([^"\s]+)"/g))if(!ids.includes(id))throw new Error(`Missing target ${id}`);
-const assets=[...new Set([...html.matchAll(/(?:src|href)="([^"#][^"]*)"/g)].map(x=>x[1]).filter(x=>!x.includes(':')))];
+const assets=[...new Set([...html.matchAll(/(?:src|href|poster)="([^"#][^"]*)"/g)].map(x=>x[1]).filter(x=>!x.includes(':')))];
 for(const asset of assets)await access(path.join(root,asset));
 if(!html.includes('<fieldset disabled>')||!html.includes('type="button" disabled'))throw new Error('Contact preview must remain inactive');
 if(/Lo Beltr|lobeltran|EL PARQUE|43197|2082/.test(html))throw new Error('Original customer data detected');

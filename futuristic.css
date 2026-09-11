@@ -1,0 +1,76 @@
+/* Cinematic layer: retain the content and give the brand depth and motion. */
+:root{--purple:#8052f5;--muted:#b7bbce}
+body{background:#080911}
+.header{background:#080a14d9;border-bottom-color:#b497ff25;box-shadow:0 8px 40px #00000020}
+.mark{background:linear-gradient(145deg,#986aff40,#19152b);box-shadow:inset 0 0 16px #a17cff18,0 0 22px #8756fc18}
+.hero{position:relative;isolation:isolate;padding-top:90px;overflow:hidden;background:#080911}
+.hero-backdrop{position:absolute;inset:0 0 auto;height:940px;z-index:-2;pointer-events:none;background:#090a13 url('tecnoges-poster.jpg') center top/cover no-repeat}
+.hero-backdrop video{height:100%;width:100%;object-fit:cover;object-position:center top;opacity:.9}
+.hero-backdrop:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#080911f5 0%,#080911dc 27%,#08091170 55%,#08091112 100%),linear-gradient(0deg,#080911 0%,#08091180 18%,transparent 65%)}
+.hero:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 47%,#7842ee19,transparent 45%)}
+.hero .wrap{position:relative}
+.hero-intro{display:flex;flex-direction:column;align-items:flex-start;gap:25px;max-width:760px;min-height:475px}
+.hero h1{font-size:clamp(3.15rem,5.25vw,5.15rem);line-height:1.05;letter-spacing:-.052em;text-shadow:0 4px 28px #05071170}
+.hero h1 span{background:linear-gradient(110deg,#c5b0ff 0%,#a889ff 48%,#b6e8ff 75%,#c5b0ff 100%);background-size:200% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:spectrum 12s ease-in-out infinite}
+.hero-copy{max-width:590px;font-size:1.08rem;color:#d0d2e2;text-shadow:0 2px 12px #060914}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:.75rem;color:#d1bfff;letter-spacing:.13em;margin-bottom:25px}
+.hero .eyebrow:before{content:'';width:7px;height:7px;border-radius:50%;background:#cbb4ff;box-shadow:0 0 12px #a071ff,0 0 26px #aa7dff}
+.hero-note{font-size:.85rem;color:#c4bdd7}
+.hero .actions{margin-top:26px}
+.button{box-shadow:0 5px 22px #7950ed20;position:relative;overflow:hidden}
+.button:not(.secondary):not(:disabled){background:linear-gradient(120deg,#7a47ed,#9766ff);border-color:#b69bff55;box-shadow:0 8px 28px #7345e940,inset 0 1px 0 #ffffff35}
+.button:not(.secondary):not(:disabled):hover{box-shadow:0 8px 40px #9161ff65;transform:translateY(-3px)}
+.button.secondary{background:#0e102065;backdrop-filter:blur(10px);border-color:#c5b3ff50}
+.button.secondary:hover{background:#9974ff20;border-color:#c5b3ff90}
+.motion-control{display:inline-flex;align-items:center;gap:9px;border:1px solid #cfbdff45;border-radius:30px;padding:9px 15px;background:#0b0d1eaa;color:#ddd5ee;font:inherit;font-size:.8rem;backdrop-filter:blur(12px);margin-top:22px;cursor:pointer}
+.motion-control:before{content:'Ⅱ';font-weight:700;color:#bda3ff}.motion-control[aria-pressed=true]:before{content:'▷'}
+.hero-product{max-width:1030px;margin:78px auto 0;border:1px solid #af8bff65;border-radius:15px;background:#141626e8;box-shadow:0 -1px 0 #d0bbff45,0 0 65px #8256ed22,0 35px 90px #0009;transform:perspective(1600px) rotateX(4deg);transform-origin:center top;transition:transform .6s ease,box-shadow .6s ease}
+.hero-product:hover{transform:perspective(1600px) rotateX(0);box-shadow:0 0 90px #8256ed32,0 35px 90px #0009}
+.hero-product .product-bar{background:linear-gradient(100deg,#1d1c32,#111928);border-bottom:1px solid #b596ff25;padding:17px 23px}
+.hero-product .product-bar span:first-child:before{content:'● ● ●';font-size:.65rem;letter-spacing:.14em;color:#9582b8;margin-right:20px}
+.hero-product .screen{aspect-ratio:2.55;max-height:415px}
+.proof{max-width:1100px;margin:20px auto 0;border-bottom-color:#bfa4ff25;padding:30px 0 35px}.proof span{color:#b395ff}
+.light{background-color:#f3f5fa;background-image:radial-gradient(ellipse at 100% 0,#8567e411,transparent 55%)}
+.solutions{gap:20px}
+.solution{position:relative;padding:30px 26px;background:linear-gradient(145deg,#ffffff,#f6f7fd);border:1px solid #78629b25;border-radius:14px;box-shadow:0 10px 30px #25345507;transition:transform .3s,box-shadow .3s,border-color .3s}
+.solution:hover{transform:translateY(-7px);border-color:#9673e870;box-shadow:0 20px 40px #4f32951a}
+.solution .number{font-size:.78rem;letter-spacing:.065em}.solution li{font-size:.9rem}.solution h3{font-size:1.45rem}
+.product-section{position:relative;background:radial-gradient(ellipse at 10% 0,#143b3860,transparent 55%),#0b141b;color:#ecfff9;--muted:#aec7c3}
+.product-section .eyebrow.green{color:#7ce4b7}.product-tabs button{color:#bcdcd4;border-color:#76bfa24a;background:#ffffff04}.product-tabs button:hover{border-color:#84ecc1aa}.product-tabs button[aria-selected=true]{background:#153d34;border-color:#79e4b7;color:#d9fff0;box-shadow:0 0 20px #42d89c14}
+.product-view{border-color:#77dab14a;box-shadow:0 0 55px #41c29b12,0 30px 80px #0005;background:#101e26}
+.product-caption{background:linear-gradient(105deg,#10242b,#121d29);color:#e5fff5;border-top:1px solid #6ff2b82a}.product-caption p{color:#adc7c2}.product-caption .text-link{color:#95ecc7}.caption-note{color:#9bbab2}.flow{color:#9acdbb}.flow span{padding:7px 10px;background:#6dd6b00a;border:1px solid #6dd6b022;border-radius:5px}.flow span:not(:last-child):after{margin-left:12px}
+#nosotros{position:relative;background:radial-gradient(ellipse at 0% 50%,#632bbe1d,transparent 65%),#0a0b13}
+.principle{padding:27px 0;border-color:#ae8fee28}.principle>span{width:34px;height:34px;display:grid;place-items:center;background:#8352ff15;border:1px solid #a882ff30;border-radius:8px}
+.process article{padding:26px 22px;background:#ffffffb0;border:1px solid #8265b225;border-radius:12px;box-shadow:0 10px 30px #21305a05}.process .number{margin:0}.process article:nth-child(even){background:linear-gradient(140deg,#fff,#efecfb)}
+#modelo{background:radial-gradient(ellipse at 80% 20%,#6f36ae25,transparent 60%),#090a12}.price-box{background:linear-gradient(135deg,#211834b8,#0e1423);border-color:#b389ff65;box-shadow:0 0 70px #8450db14,inset 0 1px 0 #ffffff15}.price-box .price{background:linear-gradient(100deg,#fff,#bd9bff);background-clip:text;-webkit-background-clip:text;color:transparent}.price-box .price small{color:#c3bcd6}
+.contact-form{box-shadow:0 24px 80px #48387615;border-color:#8d71d42b}.contact-form .button:disabled{box-shadow:none}.footer{border-top:1px solid #aa88ee24;background:#080912}
+.motion-enter{animation:rise-in .75s cubic-bezier(.2,.7,.2,1) both}.motion-enter:nth-child(2){animation-delay:90ms}.motion-enter:nth-child(3){animation-delay:160ms}
+@keyframes rise-in{from{opacity:.35;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spectrum{0%,100%{background-position:0% center}50%{background-position:100% center}}
+html[data-motion=paused] *,html[data-motion=paused] *:before,html[data-motion=paused] *:after{animation-play-state:paused!important}
+@media(min-width:1500px){.hero-backdrop{height:1000px}.hero-intro{min-height:490px}}
+@media(max-width:1000px){.hero-backdrop{height:910px;background-position:60% top}.hero-backdrop video{object-position:60% top}.hero-intro{max-width:660px;min-height:450px}.hero h1{font-size:4.1rem}.hero-backdrop:after{background:linear-gradient(90deg,#080911f2,#080911a8 60%,#08091142),linear-gradient(0deg,#080911,transparent 70%)}.solution{padding:25px 20px}}
+@media(max-width:760px){.hero{padding-top:52px}.hero-backdrop{height:830px;background-position:62% top}.hero-backdrop video{object-position:62% top;opacity:.7}.hero-backdrop:after{background:linear-gradient(90deg,#080911dc,#08091170),linear-gradient(0deg,#080911,transparent 90%)}.hero .eyebrow{font-size:.68rem;letter-spacing:.09em;line-height:1.7;max-width:330px}.hero .eyebrow:before{flex-shrink:0}.hero-intro{min-height:0;gap:24px}.hero h1{font-size:clamp(2.75rem,10.8vw,4.5rem);line-height:1.08}.hero-copy{font-size:1.02rem;max-width:540px}.hero-product{margin-top:45px;transform:none;border-radius:10px}.hero-product:hover{transform:none}.hero-product .product-bar{font-size:.7rem;padding:12px;gap:10px}.hero-product .product-bar span:first-child:before{display:none}.hero-product .screen{aspect-ratio:1.65}.hero-product .screen img{width:145%;max-width:none}.motion-control{font-size:.78rem;margin-top:18px}.proof{padding:24px 0}.solution{padding:27px}.flow{gap:7px}.flow span{font-size:.8rem}.section-head{gap:23px}.product-caption{padding:24px}.process article{padding:24px 18px}.links{background:#0e1020f5;backdrop-filter:blur(18px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hero-backdrop video{visibility:hidden}.hero-product{transform:none}.hero-product:hover,.solution:hover{transform:none}}
+/* An explicit visitor action may enable the video even with reduced motion. */
+html[data-motion=running] .hero-backdrop video{visibility:visible}
+
+/* SISFRU showcase: a compact, floating 3D product stage. */
+.product-section .wrap{position:relative}
+.product-tabs{position:relative;z-index:4;margin-bottom:22px;padding:7px;border:1px solid #6ed9b638;border-radius:13px;background:#06151be6;box-shadow:0 15px 35px #0004,inset 0 1px #ffffff10;backdrop-filter:blur(16px)}
+.product-tabs:before{content:'●  SISFRU / LIVE PREVIEW     7 FLUJOS CONECTADOS     CONTROL OPERACIONAL';display:block;margin:0 5px 7px;padding:2px 8px;color:#bceedd;font-size:.65rem;letter-spacing:.12em;opacity:.82}
+.product-tabs:before:first-letter{color:#70efb2}
+.product-tabs button{border-color:transparent;transition:transform .25s,background .25s,box-shadow .25s}.product-tabs button[aria-selected=true]{transform:translateY(-2px);box-shadow:0 7px 16px #0005,inset 0 1px #ffffff18}
+.product-view{position:relative;isolation:isolate;transform:perspective(1500px) rotateX(3deg) rotateY(-1.2deg);transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s;box-shadow:0 0 0 1px #8bf2cf22,0 0 70px #40d3a31c,0 30px 60px #0008}
+.product-view:hover{transform:perspective(1500px) rotateX(0deg) rotateY(0deg) translateY(-4px);box-shadow:0 0 0 1px #a6ffe044,0 0 90px #40d3a32e,0 35px 70px #0009}
+.product-view:before{content:'';position:absolute;z-index:-1;inset:9px -13px -13px 13px;border-radius:14px;background:linear-gradient(135deg,#75e7bd30,#07504410 45%,#03151c);transform:translateZ(-28px);box-shadow:0 22px 30px #0008}
+.product-view:after{content:'';position:absolute;z-index:3;inset:0;pointer-events:none;border-radius:12px;background:linear-gradient(120deg,#ffffff18,transparent 14%,transparent 75%,#77eab312);mix-blend-mode:screen}
+.product-view .screen{position:relative;background:#071319;box-shadow:inset 0 0 0 1px #a6f6d715,inset 0 20px 35px #0004}
+.product-view .screen:before{content:'SISFRU  /  OPERACIÓN CONECTADA';position:absolute;z-index:2;left:20px;top:13px;color:#bcf8df;font-size:.62rem;letter-spacing:.13em;opacity:.78;text-shadow:0 0 10px #64e8b0;pointer-events:none}
+.product-view .screen{max-height:560px;overflow:hidden}
+.product-view .screen img{filter:saturate(.93) contrast(1.02);transition:transform .7s ease;transform-origin:center top}.product-view:hover .screen img{transform:scale(1.012)}
+.product-caption{position:relative;z-index:4}.flow{position:relative;z-index:2}
+@keyframes pulse-live{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.2)}}
+.product-tabs:before{animation:pulse-live 2.4s ease-in-out infinite}
+@media(max-width:760px){.product-tabs{padding:5px;overflow:auto;flex-wrap:nowrap}.product-tabs:before{content:'● LIVE PREVIEW / SISFRU';white-space:nowrap;font-size:.56rem;margin-bottom:5px}.product-tabs button{white-space:nowrap;padding:9px 11px}.product-view,.product-view:hover{transform:none}.product-view:before{inset:6px -7px -8px 7px}.product-view .screen{max-height:360px}.product-view .screen:before{left:12px;top:9px;font-size:.5rem}.product-view:hover .screen img{transform:none}}
+@media(prefers-reduced-motion:reduce){.product-view,.product-view:hover{transform:none}.product-tabs:before{animation:none}}

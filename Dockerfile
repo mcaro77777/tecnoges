@@ -1,7 +1,7 @@
 FROM nginx:1.29-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html styles.css site.js /usr/share/nginx/html/
+COPY index.html styles.css futuristic.css site.js motion.js tecnoges-hero.webm tecnoges-hero.mp4 tecnoges-poster.jpg /usr/share/nginx/html/
 COPY assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 80
