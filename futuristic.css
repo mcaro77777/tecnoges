@@ -74,3 +74,54 @@ html[data-motion=running] .hero-backdrop video{visibility:visible}
 .product-tabs:before{animation:pulse-live 2.4s ease-in-out infinite}
 @media(max-width:760px){.product-tabs{padding:5px;overflow:auto;flex-wrap:nowrap}.product-tabs:before{content:'● LIVE PREVIEW / SISFRU';white-space:nowrap;font-size:.56rem;margin-bottom:5px}.product-tabs button{white-space:nowrap;padding:9px 11px}.product-view,.product-view:hover{transform:none}.product-view:before{inset:6px -7px -8px 7px}.product-view .screen{max-height:360px}.product-view .screen:before{left:12px;top:9px;font-size:.5rem}.product-view:hover .screen img{transform:none}}
 @media(prefers-reduced-motion:reduce){.product-view,.product-view:hover{transform:none}.product-tabs:before{animation:none}}
+
+/* Warm technology palette inspired by the coral and burgundy reference. */
+:root{--bg:#160a10;--panel:#24141b;--ink:#fffafa;--muted:#c7b9bd;--purple:#d76467;--line:#f3bdc322;--surface:#fbf8f7;--surface-soft:#f3eceb;--ink-muted:#766d70}
+body{background:#160a10;color:#fffafa}
+::selection{background:#d76467;color:#fff}
+.header{background:#170a11e8;border-bottom-color:#efa7ae24;box-shadow:0 10px 45px #19060c50}
+.header.scrolled{background:#170a11e8;border-color:#efa7ae24}
+.brand{color:#fff9f8}.mark{border-color:#e9848990;background:linear-gradient(145deg,#e5767960,#30131d);box-shadow:inset 0 0 16px #ffc3c820,0 0 24px #d65d6528}
+.links{color:#decfd2}.links a:hover{color:#ffb4b8}.links a.active{color:#ffb4b8}
+.nav>.button.secondary{border-color:#e7a4a851;background:#2b111b8a}.nav>.button.secondary:hover{background:#d7646725;border-color:#f0a6ac80}
+.hero{background:#160a10}
+.hero-backdrop{background-color:#4a1520;background-blend-mode:color;background-position:center top}
+.hero-backdrop video{filter:hue-rotate(55deg) saturate(.78) contrast(1.08) brightness(.86)}
+.hero-backdrop:after{background:linear-gradient(90deg,#160a10f7 0%,#160a10dc 28%,#2b0e196e 57%,#160a1015 100%),linear-gradient(0deg,#160a10 0%,#160a1088 20%,transparent 68%)}
+.hero:after{background:radial-gradient(ellipse at 16% 46%,#e36e7330,transparent 47%)}
+.hero .eyebrow{color:#f2a8ad}.hero .eyebrow:before{background:#f09a9f;box-shadow:0 0 12px #e06b72,0 0 27px #dc5f69}
+.hero h1 span{background:linear-gradient(110deg,#ffd2d2 0%,#ea8c91 42%,#d45e67 70%,#ffd1cf 100%);background-size:200% auto;background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-copy{color:#e4d9dc}.hero-note{color:#d8c6cb}
+.button{background:#d76467;box-shadow:0 5px 22px #c84f5a2b}
+.button:not(.secondary):not(:disabled){background:linear-gradient(120deg,#c94f58,#e3777a);border-color:#ffc1c466;box-shadow:0 8px 30px #c8495750,inset 0 1px 0 #ffffff45}
+.button:not(.secondary):not(:disabled):hover{background:linear-gradient(120deg,#b9414e,#dc656d);box-shadow:0 10px 42px #d45e6866}
+.button.secondary{background:#2b111b70;border-color:#efa8ad50}.button.secondary:hover{background:#d7646722;border-color:#f3a8ae90}
+.motion-control{border-color:#efa9ae48;background:#230e17b8;color:#eadadd}.motion-control:before{color:#ef8f95}
+.hero-product{border-color:#e8868c70;background:#25141ce8;box-shadow:0 -1px 0 #ffc0c34d,0 0 70px #d254612c,0 38px 95px #0c0207cc}
+.hero-product:hover{box-shadow:0 0 95px #df69713a,0 38px 95px #0c0207cc}
+.hero-product .product-bar{background:linear-gradient(100deg,#351822,#1d1018);border-bottom-color:#f1a0a72b}.hero-product .product-bar span:first-child:before{color:#c48d94}.hero-product .product-bar span:last-child{color:#8bdbb5}
+.proof{border-bottom-color:#efafb527;color:#d9c9cd}.proof span{color:#eb8a90}
+.light{background-color:#fbf9f8;background-image:radial-gradient(ellipse at 100% 0,#d7646710,transparent 55%);color:#292326;--muted:#756f72;--line:#4a222b1c}
+.light .eyebrow{color:#c6535b}.light .number{color:#c6535b}
+.solution{background:linear-gradient(145deg,#fff,#f8f2f2);border-color:#b85d672c;box-shadow:0 12px 34px #4e1e2909}
+.solution:hover{border-color:#dc737b85;box-shadow:0 22px 45px #8f37441a}.solution li:before{color:#d05b63}
+.product-section{background:radial-gradient(ellipse at 9% 0,#7e293650,transparent 54%),radial-gradient(ellipse at 92% 78%,#d05c6720,transparent 45%),#170b11;color:#fff4f2;--muted:#ccb9bd}
+.product-section .eyebrow.green{color:#f08f95}
+.product-tabs{border-color:#e2767d42;background:#210f17e8;box-shadow:0 16px 38px #09010499,inset 0 1px #ffffff0f}.product-tabs:before{color:#f2b0b4}
+.product-tabs button{color:#dfc3c6;border-color:transparent;background:#ffffff04}.product-tabs button:hover{border-color:#e78c9290}.product-tabs button[aria-selected=true]{background:#6f2632;border-color:#ed858c;color:#fff6f5;box-shadow:0 8px 20px #09010480,inset 0 1px #ffffff28}
+.product-view{border-color:#ee858d59;background:#24131b;box-shadow:0 0 0 1px #f39ca12e,0 0 75px #d55e6928,0 32px 65px #080103dd}
+.product-view:hover{box-shadow:0 0 0 1px #ffc3c64f,0 0 95px #dc687039,0 38px 74px #080103e8}
+.product-view:before{background:linear-gradient(135deg,#ef8c9433,#6e1f2c1b 48%,#190810);box-shadow:0 24px 34px #090104d9}
+.product-view:after{background:linear-gradient(120deg,#ffd3d31f,transparent 15%,transparent 74%,#e36a7418)}
+.product-view .screen{background:#150a10;box-shadow:inset 0 0 0 1px #efb4b51c,inset 0 20px 38px #0a020690}
+.product-view .screen:before{color:#ffd0ce;text-shadow:0 0 12px #e56d74}
+.product-caption{background:linear-gradient(105deg,#32151f,#1c1119);color:#fff5f4;border-top-color:#ed8b9133}.product-caption p{color:#cbb9bd}.product-caption .text-link{color:#f09a9f}.caption-note{color:#bfaeb2}
+.flow{color:#e5bbc0}.flow span{background:#d764670d;border-color:#e6898e2d}
+#nosotros{background:radial-gradient(ellipse at 0% 50%,#c44e5b25,transparent 64%),#160a10}.principle{border-color:#e291972a}.principle>span{color:#f09ba0;background:#d7646718;border-color:#e8868c38}
+.process article{background:#fffdfc;border-color:#bb67702c;box-shadow:0 12px 34px #60263108}.process article:nth-child(even){background:linear-gradient(140deg,#fff,#f6ecec)}
+#modelo{background:radial-gradient(ellipse at 82% 20%,#b23e502f,transparent 60%),#160a10}
+.price-box{background:linear-gradient(135deg,#351722c7,#1b1017);border-color:#e77d856b;box-shadow:0 0 72px #cc4f5c20,inset 0 1px 0 #ffffff16}.price-box .price{background:linear-gradient(100deg,#fff8f7,#ed969b);background-clip:text;-webkit-background-clip:text;color:transparent}.price-box .price small{color:#d4c0c4}
+.contact-email{border-bottom-color:#d25b63}.coming-soon{background:#f8dfe0;color:#a93f49}.contact-form{border-color:#bd687128;box-shadow:0 24px 80px #752b3913}.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline-color:#d76467}
+.whatsapp-preview{border-color:#c9ddd2;background:#edf6f1}.footer{border-top-color:#e99ba129;background:#15090f}
+@media(max-width:1000px){.hero-backdrop:after{background:linear-gradient(90deg,#160a10f3,#24101aa8 60%,#160a1042),linear-gradient(0deg,#160a10,transparent 70%)}}
+@media(max-width:760px){.hero-backdrop:after{background:linear-gradient(90deg,#160a10df,#2c101a78),linear-gradient(0deg,#160a10,transparent 90%)}.links{background:#1c0d15f5}}
