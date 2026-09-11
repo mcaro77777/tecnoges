@@ -174,3 +174,10 @@ body{background:#101114}
 .footer{background:#111214;border-top-color:#ffffff1c}
 @media(max-width:1000px){.hero-backdrop:after{background:linear-gradient(90deg,#111214f5,#111214c0 55%,#11121445),linear-gradient(0deg,#111214,transparent 65%)}}
 @media(max-width:760px){.hero-backdrop video{filter:hue-rotate(52deg) saturate(1.04) contrast(1.18) brightness(.92)}.hero-backdrop:after{background:linear-gradient(90deg,#111214e8,#11121473),linear-gradient(0deg,#111214,transparent 82%)}.links{background:#111316fa}}
+
+/* Video balance: mute neon magentas while preserving detail and movement. */
+.hero-backdrop video{position:relative;z-index:0;opacity:.94;filter:hue-rotate(58deg) saturate(.62) contrast(1.17) brightness(.89)}
+.hero-backdrop:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:rgba(116,58,62,.34);mix-blend-mode:color}
+.hero-backdrop:after{z-index:2;background:linear-gradient(90deg,#111214f8 0%,#111214e5 24%,#11121487 49%,#1112142b 76%,#1112140d 100%),linear-gradient(0deg,#111214 0%,#1112146b 17%,transparent 55%)}
+@media(max-width:1000px){.hero-backdrop video{filter:hue-rotate(58deg) saturate(.59) contrast(1.14) brightness(.86)}.hero-backdrop:before{background:rgba(110,55,59,.37)}}
+@media(max-width:760px){.hero-backdrop video{opacity:.86;filter:hue-rotate(58deg) saturate(.56) contrast(1.12) brightness(.82)}.hero-backdrop:before{background:rgba(105,52,57,.4)}}
