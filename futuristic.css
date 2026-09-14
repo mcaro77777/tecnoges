@@ -181,3 +181,18 @@ body{background:#101114}
 .hero-backdrop:after{z-index:2;background:linear-gradient(90deg,#111214f8 0%,#111214e5 24%,#11121487 49%,#1112142b 76%,#1112140d 100%),linear-gradient(0deg,#111214 0%,#1112146b 17%,transparent 55%)}
 @media(max-width:1000px){.hero-backdrop video{filter:hue-rotate(58deg) saturate(.59) contrast(1.14) brightness(.86)}.hero-backdrop:before{background:rgba(110,55,59,.37)}}
 @media(max-width:760px){.hero-backdrop video{opacity:.86;filter:hue-rotate(58deg) saturate(.56) contrast(1.12) brightness(.82)}.hero-backdrop:before{background:rgba(105,52,57,.4)}}
+
+/* Photographic hero sequence: three original filmic scenes inspired by the supplied references. */
+.hero-backdrop{background:#111214;overflow:hidden}
+.cinematic-frame{position:absolute;inset:-3%;opacity:0;will-change:transform,opacity;animation:cinematic-crossfade 24s linear infinite}
+.cinematic-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.82) contrast(1.08) brightness(.82)}
+.frame-operations{animation-delay:0s}.frame-infrastructure{animation-delay:8s}.frame-industry{animation-delay:16s}
+.frame-operations img{object-position:55% top}.frame-infrastructure img{object-position:58% top}.frame-industry img{object-position:58% top}
+.cinematic-grain{position:absolute;inset:0;z-index:1;opacity:.14;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+.hero-backdrop:before{z-index:2;background:linear-gradient(110deg,rgba(33,18,22,.32),rgba(19,26,40,.08));mix-blend-mode:color}
+.hero-backdrop:after{z-index:3}
+@keyframes cinematic-crossfade{0%{opacity:0;transform:scale(1.08) translate3d(1.5%,0,0)}5%,29%{opacity:1}34%,100%{opacity:0}0%,34%{transform:scale(1.02) translate3d(-1.5%,-1%,0)}100%{transform:scale(1.02) translate3d(-1.5%,-1%,0)}}
+html[data-motion-active=false] .cinematic-frame,html[data-motion=paused] .cinematic-frame{animation-play-state:paused!important}
+@media(max-width:1000px){.cinematic-frame{inset:-2% -12%}.cinematic-frame img{object-position:62% top}}
+@media(max-width:760px){.cinematic-frame{inset:0 -45%}.cinematic-frame img{object-position:68% top;filter:saturate(.76) contrast(1.08) brightness(.72)}.cinematic-grain{opacity:.1}}
+@media(prefers-reduced-motion:reduce){.cinematic-frame{display:none;animation:none}.cinematic-frame:first-child{display:block;opacity:1;transform:none}html[data-motion=running] .cinematic-frame{display:block}html[data-motion=running] .cinematic-frame:not(:first-child){opacity:0}}

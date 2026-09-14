@@ -1,5 +1,4 @@
 // Decorative movement never blocks content, input, or product navigation.
-const video=document.querySelector('.hero-backdrop video');
 const motionControl=document.querySelector('.motion-control');
 const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
 let motionPaused=motionPreference.matches;
@@ -8,9 +7,7 @@ function syncMotion(){
   document.documentElement.dataset.motion=motionPaused?'paused':'running';
   motionControl.setAttribute('aria-pressed',String(motionPaused));
   motionControl.textContent=motionPaused?'Activar animación':'Pausar animación';
-  if(motionPaused||document.hidden||!heroVisible){video.pause();return;}
-  const playback=video.play();
-  if(playback)playback.catch(error=>{if(error.name==='AbortError'||motionPaused||document.hidden||!heroVisible)return;motionPaused=true;document.documentElement.dataset.motion='paused';motionControl.setAttribute('aria-pressed','true');motionControl.textContent='Activar animación';});
+  document.documentElement.dataset.motionActive=(!motionPaused&&!document.hidden&&heroVisible)?'true':'false';
 }
 motionControl.addEventListener('click',()=>{motionPaused=!motionPaused;syncMotion();});
 motionPreference.addEventListener('change',event=>{motionPaused=event.matches;syncMotion();});
