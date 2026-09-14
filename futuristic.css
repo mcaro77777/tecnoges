@@ -212,3 +212,18 @@ html[data-motion-active=false] .cinematic-frame,html[data-motion=paused] .cinema
 .return-card small{display:block;color:#aaa4a6;line-height:1.5}
 @media(max-width:1000px){.return-block{grid-template-columns:1fr;gap:40px}.return-card{max-width:680px}}
 @media(max-width:760px){.return-block{padding-bottom:64px;margin-bottom:64px;gap:32px}.return-card{padding:25px}.return-metric{align-items:flex-start;flex-direction:column;gap:14px}.return-metric strong{font-size:5.2rem}.return-metric span{max-width:240px}}
+
+/* Keep the complete opening message visible on common laptop screens. */
+.hero-note{margin-top:16px;font-weight:600}
+.hero .actions{margin-top:20px}
+@media(min-width:761px) and (max-height:900px){
+  .hero{padding-top:clamp(42px,6vh,62px)}
+  .hero .eyebrow{margin-bottom:14px}
+  .hero-intro{gap:16px;min-height:0}
+  .hero h1{font-size:clamp(3rem,4.7vw,4.45rem);line-height:1.01}
+  .hero-copy{max-width:680px;line-height:1.48}
+  .hero-note{margin-top:12px}
+  .hero .actions{margin-top:16px}
+  .motion-control{margin-top:14px}
+}
+@media(max-width:760px){.hero-note{margin-top:14px;line-height:1.5}.hero .actions{margin-top:17px}}
