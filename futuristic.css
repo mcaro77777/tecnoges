@@ -196,3 +196,19 @@ html[data-motion-active=false] .cinematic-frame,html[data-motion=paused] .cinema
 @media(max-width:1000px){.cinematic-frame{inset:-2% -12%}.cinematic-frame img{object-position:62% top}}
 @media(max-width:760px){.cinematic-frame{inset:0 -45%}.cinematic-frame img{object-position:68% top;filter:saturate(.76) contrast(1.08) brightness(.72)}.cinematic-grain{opacity:.1}}
 @media(prefers-reduced-motion:reduce){.cinematic-frame{display:none;animation:none}.cinematic-frame:first-child{display:block;opacity:1;transform:none}html[data-motion=running] .cinematic-frame{display:block}html[data-motion=running] .cinematic-frame:not(:first-child){opacity:0}}
+
+/* Value and return story. */
+.return-block{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;padding-bottom:95px;margin-bottom:90px;border-bottom:1px solid #ffffff1c;scroll-margin-top:110px}
+.return-copy h2 span{color:#ed777c}
+.return-copy>p:not(.eyebrow){max-width:650px;margin:25px 0 30px;color:#cbc5c7;font-size:1.08rem}
+.return-card{position:relative;overflow:hidden;padding:34px;border:1px solid #e66d7482;border-radius:16px;background:linear-gradient(145deg,#21171a,#17181c);box-shadow:0 22px 65px #0008,0 0 42px #d54a5922}
+.return-card:before{content:'';position:absolute;right:-80px;top:-100px;width:260px;height:260px;border-radius:50%;background:#df62682b;filter:blur(20px)}
+.return-metric{position:relative;display:flex;align-items:end;gap:18px;padding-bottom:25px;border-bottom:1px solid #ffffff1c}
+.return-metric strong{font-size:clamp(4.6rem,8vw,7rem);line-height:.78;letter-spacing:-.08em;color:#fff}
+.return-metric span{max-width:170px;color:#f0dfe1;font-weight:650;line-height:1.3}
+.return-benefits{padding:18px 0}
+.return-benefits p{display:flex;gap:14px;padding:10px 0;color:#f3eeee;border-bottom:1px solid #ffffff10}
+.return-benefits span{color:#ef777d;font-size:.78rem;font-weight:750;letter-spacing:.08em}
+.return-card small{display:block;color:#aaa4a6;line-height:1.5}
+@media(max-width:1000px){.return-block{grid-template-columns:1fr;gap:40px}.return-card{max-width:680px}}
+@media(max-width:760px){.return-block{padding-bottom:64px;margin-bottom:64px;gap:32px}.return-card{padding:25px}.return-metric{align-items:flex-start;flex-direction:column;gap:14px}.return-metric strong{font-size:5.2rem}.return-metric span{max-width:240px}}
