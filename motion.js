@@ -19,3 +19,23 @@ if('IntersectionObserver' in window){
   document.querySelectorAll('.section-head,.solution,.principle,.process article,.price-box').forEach(element=>revealObserver.observe(element));
 }
 syncMotion();
+
+// Anchor the pen to the actual final letter, including font and viewport changes.
+const writerRobot=document.querySelector('.robot-writer');
+const writerLetter=document.querySelector('.final-e');
+function positionWriter(){
+  if(!writerRobot||!writerLetter||!writerRobot.offsetWidth)return;
+  const letter=writerLetter.getBoundingClientRect();
+  const surface=writerRobot.offsetParent.getBoundingClientRect();
+  writerRobot.style.left=`${letter.left+letter.width*.85-surface.left-writerRobot.offsetWidth*.208}px`;
+  writerRobot.style.top=`${letter.top+letter.height*.6-surface.top-writerRobot.offsetHeight*.215}px`;
+  writerRobot.classList.add('is-positioned');
+}
+window.addEventListener('resize',positionWriter);
+if('ResizeObserver' in window){
+  const writerResize=new ResizeObserver(positionWriter);
+  writerResize.observe(document.querySelector('.hero h1'));
+  writerResize.observe(writerRobot);
+}
+document.fonts?.ready.then(positionWriter);
+positionWriter();
