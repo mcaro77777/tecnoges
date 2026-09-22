@@ -228,17 +228,32 @@ html[data-motion-active=false] .cinematic-frame,html[data-motion=paused] .cinema
 }
 @media(max-width:760px){.hero-note{margin-top:14px;line-height:1.5}.hero .actions{margin-top:17px}}
 
-/* The chassis stays fixed while the forearm pivots at the elbow to finish the final “e”. */
+/* Nested raster links rotate around their mechanical joint centers. */
 .hero-intro{position:relative;z-index:4}.hero h1 .written-line{position:relative;display:inline-flex;align-items:baseline;background:none;color:inherit}.hero h1 .written-prefix,.hero h1 .written-period{display:inline-block}.hero h1 .final-e{position:relative;display:inline-block;background:none;color:inherit}.hero h1 .final-e-ink{display:inline-block;will-change:clip-path;animation:final-e-reveal 1.35s cubic-bezier(.33,.02,.2,1) .85s both}.writer-cursor{position:absolute;z-index:6;left:-2px;top:53%;width:8px;height:8px;border-radius:50%;background:#fff2f2!important;box-shadow:0 0 7px #fff,0 0 17px #ff777d,0 0 32px #dc5661;animation:final-e-cursor 1.45s cubic-bezier(.33,.02,.2,1) .78s both}
-.robot-writer{position:absolute;z-index:3;top:95px;left:calc(50% - 352px);width:min(13.125vw,5cm);pointer-events:none;opacity:.72;transform:rotate(-152deg);transform-origin:50% 50%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.72)) drop-shadow(0 0 10px rgba(226,104,112,.15))}.robot-writer img{width:100%;height:auto}.robot-body{opacity:.74;clip-path:inset(0 0 0 42%)}.robot-forearm{position:absolute;inset:0;transform-origin:44% 13%;will-change:transform;animation:elbow-write 2.05s cubic-bezier(.22,.7,.2,1) .45s both}.robot-forearm img{clip-path:polygon(0 0,54% 0,54% 43%,0 43%)}.writer-trail{position:absolute;left:20.8%;top:24.8%;width:2px;height:32px;border-radius:2px;background:linear-gradient(180deg,transparent,#ff7b82 62%,#fff);box-shadow:0 0 8px #ff737c,0 0 18px rgba(226,104,112,.78);transform-origin:50% 100%;animation:writer-trail-pulse 1.28s ease-out .72s both}.writer-spark{position:absolute;left:20.8%;top:24.8%;width:7px;height:7px;border-radius:50%;background:#fff4f4;box-shadow:0 0 7px #fff,0 0 16px #ff777d,0 0 34px #dc5661;animation:writer-spark-pulse .32s ease-in-out .82s 4 alternate both}
+.robot-writer{position:absolute;z-index:3;top:24px;right:-12px;width:clamp(280px,29vw,440px);aspect-ratio:3/2;pointer-events:none;filter:drop-shadow(0 12px 18px #0008)}
+.robot-writer img{display:block;width:100%;height:100%;object-fit:contain}
+.robot-base{clip-path:polygon(78% 69%,86% 67%,94% 73%,94% 88%,98% 91%,99% 96%,96% 98%,73% 98%,69% 95%,70% 91%,74% 89%,75% 80%)}
+.robot-joint{position:absolute;inset:0;will-change:transform;animation-duration:7.5s;animation-timing-function:cubic-bezier(.45,0,.55,1);animation-iteration-count:infinite}
+.robot-shoulder{transform-origin:91% 66%;animation-name:industrial-shoulder}
+.robot-upper-link{clip-path:polygon(79% 28%,84% 28%,88% 44%,94% 57%,96% 64%,96% 70%,93% 75%,89% 76%,83% 74%,79% 69%,77% 64%,79% 58%,82% 56%,83% 52%,81% 44%,77% 34%)}
+.robot-elbow{transform-origin:82% 29%;animation-name:industrial-elbow}
+.robot-lower-link{clip-path:polygon(44% 4%,48% 6%,54% 12%,72% 21%,77% 19%,83% 20%,86% 24%,87% 31%,85% 36%,81% 39%,77% 39%,72% 35%,68% 30%,49% 18%,45% 15%,42% 12%,41% 8%)}
+.robot-wrist{transform-origin:45% 9%;animation-name:industrial-wrist}
+.robot-tool{clip-path:polygon(20% 23%,22% 20%,25% 16%,28% 12%,31% 7%,36% 4%,42% 3%,45% 2%,48% 4%,49% 8%,48% 12%,46% 15%,43% 15%,40% 13%,36% 13%,32% 16%,27% 19%,23% 22%)}
+.writer-trail{position:absolute;left:20.8%;top:21.5%;width:2px;height:12px;background:linear-gradient(#fff,#ff7b82,transparent);box-shadow:0 0 8px #ff737c;transform:rotate(42deg);transform-origin:top;animation:industrial-tool-light 7.5s ease-in-out infinite}
+.writer-spark{position:absolute;left:20.8%;top:21.5%;width:4px;height:4px;border-radius:50%;background:#fff4f4;box-shadow:0 0 7px #fff,0 0 16px #ff777d;animation:industrial-tool-light 7.5s ease-in-out infinite}
+@keyframes industrial-shoulder{0%,100%{transform:rotate(0deg)}25%{transform:rotate(9deg)}55%{transform:rotate(-8deg)}78%{transform:rotate(-3deg)}}
+@keyframes industrial-elbow{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-26deg)}55%{transform:rotate(22deg)}78%{transform:rotate(12deg)}}
+@keyframes industrial-wrist{0%,100%{transform:rotate(0deg)}25%{transform:rotate(24deg)}55%{transform:rotate(-20deg)}78%{transform:rotate(-12deg)}}
+@keyframes industrial-tool-light{0%,18%,62%,100%{opacity:.15}27%,45%,78%{opacity:1}}
+/* Explicit activation also works when the device requests reduced motion. */
+html[data-motion=running] .robot-shoulder{animation:industrial-shoulder 7.5s cubic-bezier(.45,0,.55,1) infinite!important}
+html[data-motion=running] .robot-elbow{animation:industrial-elbow 7.5s cubic-bezier(.45,0,.55,1) infinite!important}
+html[data-motion=running] .robot-wrist{animation:industrial-wrist 7.5s cubic-bezier(.45,0,.55,1) infinite!important}
 @keyframes final-e-reveal{0%,10%{clip-path:inset(0 100% 0 0)}45%{clip-path:inset(0 42% 48% 0)}72%{clip-path:inset(0 10% 18% 0)}100%{clip-path:inset(0)}}
 @keyframes final-e-cursor{0%,8%{left:-2px;top:53%;opacity:0}15%{opacity:1}44%{left:54%;top:45%}70%{left:76%;top:62%}88%{left:100%;top:52%;opacity:1}100%{left:100%;top:52%;opacity:0}}
-@keyframes elbow-write{0%,12%{transform:rotate(-7deg)}38%{transform:rotate(5deg)}61%{transform:rotate(-3.5deg)}81%{transform:rotate(1.5deg)}100%{transform:rotate(0)}}
-@keyframes writer-trail-pulse{0%,8%{opacity:0;transform:rotate(152deg) scaleY(.1)}24%{opacity:.9}72%{opacity:.55;transform:rotate(152deg) scaleY(1)}100%{opacity:0;transform:rotate(152deg) scaleY(.2)}}
-@keyframes writer-spark-pulse{from{opacity:.35;transform:scale(.72)}to{opacity:1;transform:scale(1.35)}}
-html[data-motion-active=false] .final-e-ink,html[data-motion-active=false] .writer-cursor,html[data-motion-active=false] .robot-forearm,html[data-motion-active=false] .writer-trail,html[data-motion-active=false] .writer-spark{animation-play-state:paused!important}
-html[data-motion=paused] .final-e-ink{animation:none;clip-path:inset(0)}html[data-motion=paused] .writer-cursor,html[data-motion=paused] .writer-trail,html[data-motion=paused] .writer-spark{display:none}html[data-motion=paused] .robot-forearm{animation:none;transform:none}
+html[data-motion-active=false] .final-e-ink,html[data-motion-active=false] .writer-cursor,html[data-motion-active=false] .robot-joint,html[data-motion-active=false] .writer-trail,html[data-motion-active=false] .writer-spark{animation-play-state:paused!important}
+html[data-motion=paused] .final-e-ink{animation:none;clip-path:inset(0)}html[data-motion=paused] .writer-cursor,html[data-motion=paused] .writer-trail,html[data-motion=paused] .writer-spark{display:none}html[data-motion=paused] .robot-joint{animation-play-state:paused!important}
 @media(max-width:760px){.robot-writer{display:none}.hero h1 .final-e-ink{animation-duration:1s}.writer-cursor{animation-duration:1.1s}}
-@media(prefers-reduced-motion:reduce){.hero h1 .final-e-ink{animation:none;clip-path:inset(0)}.writer-cursor,.writer-trail,.writer-spark{display:none}.robot-forearm{animation:none;transform:none}}
-html[data-motion=running] .hero h1 .final-e-ink{animation:final-e-reveal 1.35s cubic-bezier(.33,.02,.2,1) .85s both}html[data-motion=running] .writer-cursor{display:block;animation:final-e-cursor 1.45s cubic-bezier(.33,.02,.2,1) .78s both}html[data-motion=running] .writer-trail{display:block;animation:writer-trail-pulse 1.28s ease-out .72s both}html[data-motion=running] .writer-spark{display:block;animation:writer-spark-pulse .32s ease-in-out .82s 4 alternate both}@media(min-width:1101px){html[data-motion=running] .robot-forearm{animation:elbow-write 2.05s cubic-bezier(.22,.7,.2,1) .45s both}}
-@media(max-width:1100px){.robot-writer{display:none!important}}
+@media(prefers-reduced-motion:reduce){.hero h1 .final-e-ink{animation:none;clip-path:inset(0)}.writer-cursor,.writer-trail,.writer-spark{display:none}html:not([data-motion=running]) .robot-joint{animation:none;transform:none}}
+html[data-motion=running] .hero h1 .final-e-ink{animation:final-e-reveal 1.35s cubic-bezier(.33,.02,.2,1) .85s both}html[data-motion=running] .writer-cursor{display:block;animation:final-e-cursor 1.45s cubic-bezier(.33,.02,.2,1) .78s both}@media(max-width:1100px){.robot-writer{display:none!important}}
