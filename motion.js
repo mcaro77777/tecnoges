@@ -25,7 +25,7 @@ const writerLetter=document.querySelector('.final-e');
 const writerStroke=document.querySelector('.writer-letter-stroke');
 const writerSpark=document.querySelector('.writer-spark');
 const writerJoints=['shoulder','elbow','wrist'].map(name=>document.querySelector(`.robot-${name}`));
-const writerLength=writerStroke.getTotalLength();
+let writerLength=writerStroke.getTotalLength();
 let writerGeometry=null;
 let writerFrame=0;
 let writerPreviousTime=null;
@@ -38,7 +38,8 @@ function positionWriter(){
   if(!writerRobot.offsetWidth){writerGeometry=null;updateWriterPlayback();return;}
   const letter=writerLetter.getBoundingClientRect();
   const surface=writerRobot.offsetParent.getBoundingClientRect();
-  const w=writerRobot.offsetWidth,h=writerRobot.offsetHeight;
+  const robotBox=writerRobot.getBoundingClientRect();
+  const w=robotBox.width,h=robotBox.height;
   // The pedestal remains upright. Its top joint stays fixed beside the letter.
   const shoulder={x:w*.91,y:h*.66};
   const elbow={x:w*.82,y:h*.29};
@@ -58,7 +59,16 @@ function positionWriter(){
     lowerAngle:Math.atan2(wrist.y-elbow.y,wrist.x-elbow.x),
     toolAngle:Math.atan2(tip.y-wrist.y,tip.x-wrist.x)
   };
-  writerLetter.querySelectorAll('path').forEach(path=>path.style.strokeWidth=`${parseFloat(getComputedStyle(writerLetter).fontSize)*.085}px`);
+  // Measure and draw in CSS pixels: non-scaling SVG strokes otherwise apply
+  // dash lengths in a different coordinate system from getPointAtLength().
+  const x=value=>value*letter.width/100,y=value=>value*letter.height/100;
+  const pathData=`M${x(14)} ${y(58)} H${x(86)} C${x(86)} ${y(27)} ${x(14)} ${y(27)} ${x(14)} ${y(61)} C${x(14)} ${y(87)} ${x(62)} ${y(91)} ${x(87)} ${y(77)}`;
+  writerLetter.querySelector('svg').setAttribute('viewBox',`0 0 ${letter.width} ${letter.height}`);
+  writerLetter.querySelectorAll('path').forEach(path=>{
+    path.setAttribute('d',pathData);
+    path.style.strokeWidth=`${parseFloat(getComputedStyle(writerLetter).fontSize)*.085}px`;
+  });
+  writerLength=writerStroke.getTotalLength();
   writerStroke.style.strokeDasharray=String(writerLength);
   writerLetter.classList.add('writer-ready');
   renderWriter();
@@ -76,11 +86,11 @@ function renderWriter(){
     // Lift and return in a smooth arc, with no new ink during the return.
     const t=(phase-writerDrawTime)/(writerCycle-writerDrawTime),u=1-t;
     const end=writerStroke.getPointAtLength(writerLength),start=writerStroke.getPointAtLength(0);
-    point={x:u*u*u*end.x+3*u*u*t*115+3*u*t*t*5+t*t*t*start.x,
-      y:u*u*u*end.y+3*u*u*t*105+3*u*t*t*100+t*t*t*start.y};
+    point={x:u*u*u*end.x+3*u*u*t*writerGeometry.letterWidth*1.15+3*u*t*t*writerGeometry.letterWidth*.05+t*t*t*start.x,
+      y:u*u*u*end.y+3*u*u*t*writerGeometry.letterHeight*1.05+3*u*t*t*writerGeometry.letterHeight+t*t*t*start.y};
   }
   const g=writerGeometry;
-  const target={x:g.letterX+point.x*g.letterWidth/100,y:g.letterY+point.y*g.letterHeight/100};
+  const target={x:g.letterX+point.x,y:g.letterY+point.y};
   const toolAngle=155*Math.PI/180;
   const dx=target.x-g.tool*Math.cos(toolAngle)-g.shoulder.x;
   const dy=target.y-g.tool*Math.sin(toolAngle)-g.shoulder.y;

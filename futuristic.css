@@ -235,7 +235,7 @@ html[data-motion-active=false] .cinematic-frame,html[data-motion=paused] .cinema
 .hero h1 .final-e{position:relative;display:inline-block;background:none;color:inherit}
 .hero h1 .final-e-ink{display:inline-block;animation:none!important}
 .writer-letter-trace{position:absolute;inset:0;width:100%;height:100%;overflow:visible;opacity:0;fill:none;stroke:#e66b76;stroke-linecap:round;stroke-linejoin:round}
-.writer-letter-trace path{vector-effect:non-scaling-stroke}
+.writer-letter-stroke{stroke-linecap:butt}
 .writer-letter-guide{opacity:.18}
 .robot-writer{position:absolute;z-index:5;top:0;left:0;width:clamp(190px,16vw,230px);aspect-ratio:3/2;pointer-events:none;opacity:0;filter:drop-shadow(0 8px 12px #0008)}
 .robot-writer.is-positioned{opacity:1}
