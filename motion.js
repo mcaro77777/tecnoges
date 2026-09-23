@@ -1,126 +1,138 @@
-// Decorative movement never blocks content, input, or product navigation.
-const motionControl=document.querySelector('.motion-control');
-const motionPreference=window.matchMedia('(prefers-reduced-motion: reduce)');
-let motionPaused=motionPreference.matches;
-let heroVisible=true;
-function syncMotion(){
-  document.documentElement.dataset.motion=motionPaused?'paused':'running';
-  motionControl.setAttribute('aria-pressed',String(motionPaused));
-  motionControl.textContent=motionPaused?'Activar animación':'Pausar animación';
-  document.documentElement.dataset.motionActive=(!motionPaused&&!document.hidden&&heroVisible)?'true':'false';
-  updateWriterPlayback();
-}
-motionControl.addEventListener('click',()=>{motionPaused=!motionPaused;syncMotion();});
-motionPreference.addEventListener('change',event=>{motionPaused=event.matches;syncMotion();});
-document.addEventListener('visibilitychange',syncMotion);
-if('IntersectionObserver' in window){
-  const heroObserver=new IntersectionObserver(entries=>{heroVisible=entries[0].isIntersecting;syncMotion();},{threshold:0});
-  heroObserver.observe(document.querySelector('.hero'));
-  const revealObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){if(!motionPaused)entry.target.classList.add('motion-enter');revealObserver.unobserve(entry.target);}});},{threshold:.12});
-  document.querySelectorAll('.section-head,.solution,.principle,.process article,.price-box').forEach(element=>revealObserver.observe(element));
-}
-// The SVG path is the single source for the visible stroke and the pen position.
-const writerRobot=document.querySelector('.robot-writer');
-const writerLetter=document.querySelector('.final-e');
-const writerStroke=document.querySelector('.writer-letter-stroke');
-const writerSpark=document.querySelector('.writer-spark');
-const writerJoints=['shoulder','elbow','wrist'].map(name=>document.querySelector(`.robot-${name}`));
-let writerLength=writerStroke.getTotalLength();
-let writerGeometry=null;
-let writerFrame=0;
-let writerPreviousTime=null;
-let writerElapsed=0;
-const writerCycle=5600;
-const writerDrawTime=4200;
-const degrees=radians=>radians*180/Math.PI;
+// One timeline drives the joints, carried module, and application assembly.
+// All content and navigation remain available without animation or JavaScript.
+(() => {
+  'use strict';
+  const stage = document.querySelector('.assembly-stage');
+  const robot = document.querySelector('.assembly-robot');
+  const control = document.querySelector('.motion-control');
+  if (!stage || !robot || !control) return;
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const joints = ['shoulder', 'elbow', 'wrist'].map(name => robot.querySelector('.robot-' + name));
+  const modules = [...document.querySelectorAll('[data-module]')];
+  const steps = [...document.querySelectorAll('[data-step]')];
+  const chip = document.querySelector('.assembly-chip');
+  const application = document.querySelector('.assembly-app');
+  const source = document.querySelector('.assembly-source');
+  const spark = robot.querySelector('.writer-spark');
+  let paused = preference.matches;
+  let visible = true;
+  let frame = 0;
+  let previous = null;
+  let elapsed = 0;
+  let geometry = null;
+  const stepTime = 3200;
+  const cycleTime = 13200;
+  const degrees = value => value * 180 / Math.PI;
+  const ease = value => value * value * (3 - 2 * value);
+  const mix = (a, b, t) => a + (b - a) * t;
+  const arc = (a, b, t, lift) => ({ x: mix(a.x, b.x, ease(t)), y: mix(a.y, b.y, ease(t)) - Math.sin(Math.PI * t) * lift });
 
-function positionWriter(){
-  if(!writerRobot.offsetWidth){writerGeometry=null;updateWriterPlayback();return;}
-  const letter=writerLetter.getBoundingClientRect();
-  const surface=writerRobot.offsetParent.getBoundingClientRect();
-  const robotBox=writerRobot.getBoundingClientRect();
-  const w=robotBox.width,h=robotBox.height;
-  // The pedestal remains upright. Its top joint stays fixed beside the letter.
-  const shoulder={x:w*.91,y:h*.66};
-  const elbow={x:w*.82,y:h*.29};
-  const wrist={x:w*.45,y:h*.09};
-  const tip={x:w*.208,y:h*.215};
-  const left=letter.right-surface.left+w*.5-shoulder.x;
-  const top=letter.bottom-surface.top-h*.32-shoulder.y;
-  writerRobot.style.left=`${left}px`;
-  writerRobot.style.top=`${top}px`;
-  writerGeometry={
-    shoulder, letterX:letter.left-surface.left-left,letterY:letter.top-surface.top-top,
-    letterWidth:letter.width,letterHeight:letter.height,
-    upper:Math.hypot(elbow.x-shoulder.x,elbow.y-shoulder.y),
-    lower:Math.hypot(wrist.x-elbow.x,wrist.y-elbow.y),
-    tool:Math.hypot(tip.x-wrist.x,tip.y-wrist.y),
-    upperAngle:Math.atan2(elbow.y-shoulder.y,elbow.x-shoulder.x),
-    lowerAngle:Math.atan2(wrist.y-elbow.y,wrist.x-elbow.x),
-    toolAngle:Math.atan2(tip.y-wrist.y,tip.x-wrist.x)
-  };
-  // Measure and draw in CSS pixels: non-scaling SVG strokes otherwise apply
-  // dash lengths in a different coordinate system from getPointAtLength().
-  const x=value=>value*letter.width/100,y=value=>value*letter.height/100;
-  const pathData=`M${x(14)} ${y(58)} H${x(86)} C${x(86)} ${y(27)} ${x(14)} ${y(27)} ${x(14)} ${y(61)} C${x(14)} ${y(87)} ${x(62)} ${y(91)} ${x(87)} ${y(77)}`;
-  writerLetter.querySelector('svg').setAttribute('viewBox',`0 0 ${letter.width} ${letter.height}`);
-  writerLetter.querySelectorAll('path').forEach(path=>{
-    path.setAttribute('d',pathData);
-    path.style.strokeWidth=`${parseFloat(getComputedStyle(writerLetter).fontSize)*.085}px`;
-  });
-  writerLength=writerStroke.getTotalLength();
-  writerStroke.style.strokeDasharray=String(writerLength);
-  writerLetter.classList.add('writer-ready');
-  renderWriter();
-  writerRobot.classList.add('is-positioned');
-  updateWriterPlayback();
-}
-
-function renderWriter(){
-  if(!writerGeometry)return;
-  const phase=writerElapsed%writerCycle;
-  const drawing=phase<writerDrawTime;
-  const progress=Math.min(phase/writerDrawTime,1);
-  let point=writerStroke.getPointAtLength(writerLength*progress);
-  if(!drawing){
-    // Lift and return in a smooth arc, with no new ink during the return.
-    const t=(phase-writerDrawTime)/(writerCycle-writerDrawTime),u=1-t;
-    const end=writerStroke.getPointAtLength(writerLength),start=writerStroke.getPointAtLength(0);
-    point={x:u*u*u*end.x+3*u*u*t*writerGeometry.letterWidth*1.15+3*u*t*t*writerGeometry.letterWidth*.05+t*t*t*start.x,
-      y:u*u*u*end.y+3*u*u*t*writerGeometry.letterHeight*1.05+3*u*t*t*writerGeometry.letterHeight+t*t*t*start.y};
+  function measure() {
+    const width = robot.offsetWidth, height = robot.offsetHeight;
+    if (!width || !height || !stage.offsetWidth) { geometry = null; sync(); return; }
+    const shoulder = { x: width * .91, y: height * .66 };
+    const elbow = { x: width * .82, y: height * .29 };
+    const wrist = { x: width * .45, y: height * .09 };
+    const tip = { x: width * .208, y: height * .215 };
+    const stageRect = stage.getBoundingClientRect();
+    const localPoint = (element, fraction = .5) => {
+      const rect = element.getBoundingClientRect();
+      return { x: rect.left - stageRect.left + rect.width / 2, y: rect.top - stageRect.top + rect.height * fraction };
+    };
+    geometry = {
+      shoulder, left: robot.offsetLeft, top: robot.offsetTop,
+      upper: Math.hypot(elbow.x - shoulder.x, elbow.y - shoulder.y),
+      lower: Math.hypot(wrist.x - elbow.x, wrist.y - elbow.y),
+      tool: Math.hypot(tip.x - wrist.x, tip.y - wrist.y),
+      upperAngle: Math.atan2(elbow.y - shoulder.y, elbow.x - shoulder.x),
+      lowerAngle: Math.atan2(wrist.y - elbow.y, wrist.x - elbow.x),
+      toolAngle: Math.atan2(tip.y - wrist.y, tip.x - wrist.x),
+      source: localPoint(source, .2), targets: modules.map(element => localPoint(element, .22)),
+      lift: stage.offsetWidth * .045
+    };
+    robot.classList.add('is-positioned');
+    render(); sync();
   }
-  const g=writerGeometry;
-  const target={x:g.letterX+point.x,y:g.letterY+point.y};
-  const toolAngle=155*Math.PI/180;
-  const dx=target.x-g.tool*Math.cos(toolAngle)-g.shoulder.x;
-  const dy=target.y-g.tool*Math.sin(toolAngle)-g.shoulder.y;
-  const cosine=(dx*dx+dy*dy-g.upper*g.upper-g.lower*g.lower)/(2*g.upper*g.lower);
-  const bend=-Math.acos(Math.max(-1,Math.min(1,cosine)));
-  const upper=Math.atan2(dy,dx)-Math.atan2(g.lower*Math.sin(bend),g.upper+g.lower*Math.cos(bend));
-  const rotations=[upper-g.upperAngle,bend-(g.lowerAngle-g.upperAngle),toolAngle-upper-bend-(g.toolAngle-g.lowerAngle)];
-  writerJoints.forEach((joint,index)=>joint.style.transform=`rotate(${degrees(rotations[index])}deg)`);
-  writerStroke.style.strokeDashoffset=String(motionPaused?0:writerLength*(1-progress));
-  writerSpark.style.opacity=drawing?'1':'.15';
-}
 
-function animateWriter(time){
-  writerFrame=0;
-  if(writerPreviousTime!==null)writerElapsed+=Math.min(time-writerPreviousTime,64);
-  writerPreviousTime=time;
-  renderWriter();
-  writerFrame=requestAnimationFrame(animateWriter);
-}
-function updateWriterPlayback(){
-  const active=!motionPaused&&!document.hidden&&heroVisible&&writerGeometry;
-  if(active&&!writerFrame){writerPreviousTime=null;writerFrame=requestAnimationFrame(animateWriter);}
-  if(!active){cancelAnimationFrame(writerFrame);writerFrame=0;writerPreviousTime=null;renderWriter();}
-}
-window.addEventListener('resize',positionWriter);
-if('ResizeObserver' in window){
-  const writerResize=new ResizeObserver(positionWriter);
-  writerResize.observe(document.querySelector('.hero h1'));
-  writerResize.observe(writerRobot);
-}
-document.fonts?.ready.then(positionWriter);
-positionWriter();
-syncMotion();
+  function pointArm(target) {
+    const g = geometry;
+    const toolAngle = 155 * Math.PI / 180;
+    const dx = target.x - g.left - g.tool * Math.cos(toolAngle) - g.shoulder.x;
+    const dy = target.y - g.top - g.tool * Math.sin(toolAngle) - g.shoulder.y;
+    const cosine = (dx * dx + dy * dy - g.upper * g.upper - g.lower * g.lower) / (2 * g.upper * g.lower);
+    const bend = -Math.acos(Math.max(-1, Math.min(1, cosine)));
+    const upper = Math.atan2(dy, dx) - Math.atan2(g.lower * Math.sin(bend), g.upper + g.lower * Math.cos(bend));
+    const rotations = [upper - g.upperAngle, bend - (g.lowerAngle - g.upperAngle), toolAngle - upper - bend - (g.toolAngle - g.lowerAngle)];
+    joints.forEach((joint, index) => { joint.style.transform = `rotate(${degrees(rotations[index])}deg)`; });
+  }
+
+  function render() {
+    if (!geometry) return;
+    const phase = elapsed % cycleTime;
+    const index = Math.min(2, Math.floor(phase / stepTime));
+    const t = (phase - index * stepTime) / stepTime;
+    const complete = phase >= stepTime * 3;
+    const g = geometry;
+    const target = g.targets[index];
+    const previousTarget = index ? g.targets[index - 1] : g.source;
+    let point;
+    let carrying = false;
+    let depositing = false;
+    if (complete) {
+      // Return once, then stay at rest while the completed app remains visible.
+      point = arc(g.targets[2], g.source, Math.min((phase - stepTime * 3) / 1800, 1), g.lift);
+    } else if (t < .28) {
+      point = arc(previousTarget, g.source, t / .28, g.lift);
+    } else if (t < .42) {
+      point = g.source; carrying = true;
+    } else if (t < .82) {
+      point = arc(g.source, target, (t - .42) / .4, g.lift); carrying = true;
+    } else {
+      point = target; depositing = t < .95;
+    }
+    pointArm(point);
+    chip.style.transform = `translate(${point.x}px, ${point.y}px)`;
+    chip.classList.toggle('carrying', carrying);
+    spark.style.opacity = carrying || depositing ? '1' : '.22';
+    application.classList.toggle('complete', complete);
+    source.classList.toggle('picking', !complete && t >= .28 && t < .42);
+    modules.forEach((element, moduleIndex) => {
+      const installed = complete || moduleIndex < index || (moduleIndex === index && t >= .82);
+      element.classList.toggle('installed', installed);
+      element.classList.toggle('connecting', !complete && moduleIndex === index && depositing);
+    });
+    steps.forEach((element, stepIndex) => {
+      element.classList.toggle('active', !complete && stepIndex === index);
+      element.classList.toggle('done', complete || stepIndex < index);
+    });
+  }
+
+  function tick(time) {
+    frame = 0;
+    if (previous !== null) elapsed += Math.min(time - previous, 64);
+    previous = time;
+    render();
+    frame = requestAnimationFrame(tick);
+  }
+  function sync() {
+    const active = !paused && !document.hidden && visible && Boolean(geometry);
+    document.documentElement.dataset.motion = paused ? 'paused' : 'running';
+    document.documentElement.dataset.motionActive = String(active);
+    control.setAttribute('aria-pressed', String(paused));
+    control.textContent = paused ? 'Activar animación' : 'Pausar animación';
+    if (active && !frame) { previous = null; frame = requestAnimationFrame(tick); }
+    if (!active) { cancelAnimationFrame(frame); frame = 0; previous = null; }
+  }
+  control.addEventListener('click', () => { paused = !paused; sync(); });
+  preference.addEventListener('change', event => { paused = event.matches; if (paused) { elapsed = 12000; render(); } sync(); });
+  document.addEventListener('visibilitychange', sync);
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }, { threshold: 0 });
+    observer.observe(stage);
+  }
+  if ('ResizeObserver' in window) new ResizeObserver(measure).observe(stage);
+  else window.addEventListener('resize', measure);
+  document.fonts?.ready.then(measure);
+  if (paused) elapsed = 12000;
+  measure();
+})();
