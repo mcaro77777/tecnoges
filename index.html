@@ -4,11 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="GESFRU conecta recepción, inventario, pallets, despachos y exportación. Adquiere un sistema para tu empresa frutícola, personalízalo cuando lo necesites y paga anualmente solo por su continuidad operativa.">
-<meta name="theme-color" content="#111316">
+<meta name="theme-color" content="#120b0e">
 <title>GESFRU | Gestión frutícola que pasa a ser tuya</title>
 <link rel="preload" as="image" href="assets/robot-arm-writer.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/gesfru-operacion-panorama.jpg" media="(min-width: 761px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/gesfru-operacion-mobile.jpg" media="(max-width: 760px)" fetchpriority="high">
 <link rel="stylesheet" href="ms-tecnologia.css?v=20261030">
 <link rel="stylesheet" href="futuristic.css?v=20261030">
+<link rel="stylesheet" href="gesfru-authentic.css?v=20261030">
 <script src="gesfru-site.js?v=20261030" defer>
 </script>
 <script src="gesfru-motion.js?v=20261030" defer>
@@ -19,7 +22,7 @@
 <header class="header">
 <div class="wrap nav">
 <a class="brand" href="#inicio" aria-label="MS Tecnología, inicio">
-<span class="mark" aria-hidden="true">MS</span>MS TECNOLOGÍA</a>
+<img class="brand-logo" src="assets/ms-tecnologia-logo-256.png" width="256" height="256" alt="">MS TECNOLOGÍA</a>
 <nav class="links" id="navigation" aria-label="Navegación principal">
 <a href="#gesfru">GESFRU</a>
 <a href="#soluciones">Qué resuelve</a>
@@ -33,11 +36,17 @@
 </header>
 <main id="contenido">
 <section class="hero" id="inicio">
-<div class="lab-backdrop" aria-hidden="true"></div>
+<div class="lab-backdrop" aria-hidden="true">
+<picture>
+<source media="(max-width: 760px)" srcset="assets/gesfru-operacion-mobile.jpg">
+<img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" alt="" fetchpriority="high">
+</picture>
+<span class="lab-backdrop-noise"></span>
+</div>
 <div class="wrap">
 <div class="lab-layout">
 <div class="hero-intro">
-<p class="eyebrow">GESFRU · Gestión y trazabilidad frutícola</p>
+<p class="eyebrow">MS Tecnología presenta · GESFRU</p>
 <h1>Tu operación frutícola.<br>En un sistema que<br><span>pasa a ser tuyo.</span></h1>
 <p class="hero-copy">GESFRU conecta la operación desde la recepción de la fruta hasta su despacho y exportación. Lo adquieres para tu empresa, lo adaptas cuando lo necesitas y construyes sobre un producto que ya es tuyo.</p>
 <div class="actions">
@@ -48,7 +57,7 @@
 <p class="hero-note">Lo compras <span aria-hidden="true">/</span> Lo adaptas <span aria-hidden="true">/</span> Es tuyo</p>
 </div>
 <div class="lab-visual">
-<div class="lab-chrome"><span><i aria-hidden="true"></i> GESFRU / PRODUCT ENGINEERING</span><span>01 — 03</span></div>
+<div class="lab-chrome"><span><i aria-hidden="true"></i> GESFRU / INGENIERÍA APLICADA</span><span>01 — 03</span></div>
 <div class="assembly-stage" role="img" aria-label="Un brazo robótico ensambla datos, procesos e interfaz para representar la adaptación de GESFRU a una operación frutícola.">
 <div class="stage-grid" aria-hidden="true"></div>
 <div class="stage-ring" aria-hidden="true"></div>
@@ -86,22 +95,20 @@
 <div class="lab-controls"><p>Tu operación. Tu sistema. Tu evolución.</p></div>
 </div>
 </div>
-<div class="hero-product">
-<div class="product-bar">
-<span>GESFRU / Gestión y trazabilidad agrícola</span>
-<span>Datos de demostración</span>
+<div class="operation-ribbon" aria-labelledby="operation-ribbon-title">
+<div class="operation-ribbon-copy">
+<span>UNA SOLA HISTORIA DE DATOS</span>
+<strong id="operation-ribbon-title">Del campo al despacho.</strong>
 </div>
-<div class="screen">
-<img src="assets/gesfru-panel-demo.png" width="1610" height="977" alt="Panel de GESFRU con indicadores ficticios de temporada" fetchpriority="high">
-</div>
-</div>
-<div class="proof">
-<div>
-<span>01 /</span>Compras GESFRU</div>
-<div>
-<span>02 /</span>Lo adaptas a tu operación</div>
-<div>
-<span>03 /</span>La anualidad cubre continuidad</div>
+<ol class="operation-route" aria-label="Etapas conectadas por GESFRU">
+<li><span>01</span>Recepción</li>
+<li><span>02</span>Control</li>
+<li><span>03</span>Packing</li>
+<li><span>04</span>Inventario</li>
+<li><span>05</span>Pallets</li>
+<li><span>06</span>Despacho</li>
+<li><span>07</span>Exportación</li>
+</ol>
 </div>
 </div>
 </section>
@@ -116,6 +123,7 @@
 </div>
 <div class="solutions">
 <article class="solution">
+<div class="solution-image" aria-hidden="true"><img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" loading="lazy" alt=""></div>
 <span class="number">01 / TRAZABILIDAD OPERACIONAL</span>
 <h3>Sigue la fruta<br>en cada etapa.</h3>
 <p>Relaciona recepciones, pallets, inspecciones y movimientos para consultar la historia de la operación.</p>
@@ -126,6 +134,7 @@
 </ul>
 </article>
 <article class="solution">
+<div class="solution-image" aria-hidden="true"><img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" loading="lazy" alt=""></div>
 <span class="number">02 / DESPACHO Y EXPORTACIÓN</span>
 <h3>Coordina salidas<br>con más claridad.</h3>
 <p>Centraliza despachos, mercados, documentación y antecedentes de carga.</p>
@@ -136,6 +145,7 @@
 </ul>
 </article>
 <article class="solution">
+<div class="solution-image" aria-hidden="true"><img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" loading="lazy" alt=""></div>
 <span class="number">03 / INFORMACIÓN PARA DECIDIR</span>
 <h3>Mira la temporada<br>completa.</h3>
 <p>Consulta indicadores, volúmenes y estados desde una visión común de la operación.</p>
@@ -378,7 +388,7 @@
 <footer class="footer">
 <div class="wrap footer-row">
 <a class="brand" href="#inicio">
-<span class="mark" aria-hidden="true">MS</span>MS TECNOLOGÍA</a>
+<img class="brand-logo" src="assets/ms-tecnologia-logo-256.png" width="256" height="256" alt="">MS TECNOLOGÍA</a>
 <p>GESFRU. Gestión frutícola que pasa a ser tuya.</p>
 <p>© <span id="year">2026</span> MS TECNOLOGÍA</p>
 </div>

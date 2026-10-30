@@ -11,10 +11,12 @@
   const application = document.querySelector('.assembly-app');
   const source = document.querySelector('.assembly-source');
   const spark = robot.querySelector('.writer-spark');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
   let frame = 0;
   let previous = null;
   let elapsed = 0;
   let geometry = null;
+  let stageVisible = true;
   const stepTime = 3200;
   const cycleTime = 13200;
   const degrees = value => value * 180 / Math.PI;
@@ -110,12 +112,29 @@
     frame = requestAnimationFrame(tick);
   }
   function sync() {
-    const active = Boolean(geometry);
-    document.documentElement.dataset.motion = 'running';
+    if (geometry && motionPreference.matches) {
+      elapsed = stepTime * 3 + 1800;
+      render();
+    }
+    const active = Boolean(geometry) && stageVisible && !document.hidden && !motionPreference.matches;
+    document.documentElement.dataset.motion = active ? 'running' : 'paused';
     document.documentElement.dataset.motionActive = String(active);
     if (active && !frame) { previous = null; frame = requestAnimationFrame(tick); }
     if (!active) { cancelAnimationFrame(frame); frame = 0; previous = null; }
   }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(entries => {
+      stageVisible = entries[0]?.isIntersecting ?? true;
+      sync();
+    }, { threshold: .05 }).observe(stage);
+  }
+  document.addEventListener('visibilitychange', sync);
+  const updateMotionPreference = () => {
+    if (!motionPreference.matches && elapsed >= stepTime * 3) elapsed = 0;
+    sync();
+  };
+  if (motionPreference.addEventListener) motionPreference.addEventListener('change', updateMotionPreference);
+  else motionPreference.addListener(updateMotionPreference);
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(stage);
   else window.addEventListener('resize', measure);
   document.fonts?.ready.then(measure);

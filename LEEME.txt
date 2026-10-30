@@ -1,14 +1,16 @@
 ﻿MS TECNOLOGÍA — SITIO WEB
 
 Página principal: index.html
-Estilos: ms-tecnologia.css
+Estilos base: ms-tecnologia.css y futuristic.css
+Capa visual final: gesfru-authentic.css
 Interacciones: gesfru-site.js y gesfru-motion.js
 Imágenes: assets/gesfru-*-demo.png (versiones adaptadas con datos ficticios)
+Fondos operacionales: assets/gesfru-operacion-*.jpg
 
 Preparar la versión estática: node build.mjs
 Salida de publicación: dist/
 La configuración existente de Sites se conserva en .openai/hosting.json.
-Docker utiliza index.html, styles.css, site.js y assets/.
+Docker publica index.html, las hojas de estilo, los scripts y assets/.
 
 Contacto directo activo: WhatsApp +56 9 9399 1036 y mcsolucionestecno@gmail.com.
 La página no recopila datos mediante formularios; los botones abren el canal elegido con un mensaje preparado.
