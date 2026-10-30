@@ -1,7 +1,7 @@
 FROM nginx:1.29-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html ms-tecnologia.css futuristic.css site.js motion.js ms-tecnologia-hero.webm ms-tecnologia-hero.mp4 ms-tecnologia-poster.jpg /usr/share/nginx/html/
+COPY index.html ms-tecnologia.css futuristic.css gesfru-site.js gesfru-motion.js ms-tecnologia-hero.webm ms-tecnologia-hero.mp4 ms-tecnologia-poster.jpg /usr/share/nginx/html/
 COPY assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 80

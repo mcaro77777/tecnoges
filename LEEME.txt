@@ -2,7 +2,7 @@
 
 Página principal: index.html
 Estilos: ms-tecnologia.css
-Interacciones: site.js
+Interacciones: gesfru-site.js y gesfru-motion.js
 Imágenes: assets/gesfru-*-demo.png (versiones adaptadas con datos ficticios)
 
 Preparar la versión estática: node build.mjs

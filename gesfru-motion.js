@@ -1,12 +1,9 @@
-// One timeline drives the joints, carried module, and application assembly.
-// All content and navigation remain available without animation or JavaScript.
+// One always-on timeline drives the joints, carried module, and application assembly.
 (() => {
   'use strict';
   const stage = document.querySelector('.assembly-stage');
   const robot = document.querySelector('.assembly-robot');
-  const control = document.querySelector('.motion-control');
-  if (!stage || !robot || !control) return;
-  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!stage || !robot) return;
   const joints = ['shoulder', 'elbow', 'wrist'].map(name => robot.querySelector('.robot-' + name));
   const modules = [...document.querySelectorAll('[data-module]')];
   const steps = [...document.querySelectorAll('[data-step]')];
@@ -14,8 +11,6 @@
   const application = document.querySelector('.assembly-app');
   const source = document.querySelector('.assembly-source');
   const spark = robot.querySelector('.writer-spark');
-  let paused = preference.matches;
-  let visible = true;
   let frame = 0;
   let previous = null;
   let elapsed = 0;
@@ -115,24 +110,14 @@
     frame = requestAnimationFrame(tick);
   }
   function sync() {
-    const active = !paused && !document.hidden && visible && Boolean(geometry);
-    document.documentElement.dataset.motion = paused ? 'paused' : 'running';
+    const active = Boolean(geometry);
+    document.documentElement.dataset.motion = 'running';
     document.documentElement.dataset.motionActive = String(active);
-    control.setAttribute('aria-pressed', String(paused));
-    control.textContent = paused ? 'Activar animación' : 'Pausar animación';
     if (active && !frame) { previous = null; frame = requestAnimationFrame(tick); }
     if (!active) { cancelAnimationFrame(frame); frame = 0; previous = null; }
-  }
-  control.addEventListener('click', () => { paused = !paused; sync(); });
-  preference.addEventListener('change', event => { paused = event.matches; if (paused) { elapsed = 12000; render(); } sync(); });
-  document.addEventListener('visibilitychange', sync);
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }, { threshold: 0 });
-    observer.observe(stage);
   }
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(stage);
   else window.addEventListener('resize', measure);
   document.fonts?.ready.then(measure);
-  if (paused) elapsed = 12000;
   measure();
 })();
