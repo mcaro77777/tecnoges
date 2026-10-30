@@ -10,7 +10,6 @@ Salida de publicación: dist/
 La configuración existente de Sites se conserva en .openai/hosting.json.
 Docker utiliza index.html, styles.css, site.js y assets/.
 
-El formulario y WhatsApp son presentaciones visuales desactivadas, a petición del propietario.
-No recogen datos ni envían mensajes. El enlace directo de correo existente se conserva.
-Para habilitarlos se deben configurar el número comercial y un servicio de recepción.
+Contacto directo activo: WhatsApp +56 9 9399 1036 y mcsolucionestecno@gmail.com.
+La página no recopila datos mediante formularios; los botones abren el canal elegido con un mensaje preparado.
 Las capturas originales con información de clientes no se incluyen en assets/.
