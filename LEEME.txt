@@ -1,7 +1,7 @@
-﻿TECNOGES — SITIO WEB
+﻿MS TECNOLOGÍA — SITIO WEB
 
 Página principal: index.html
-Estilos: styles.css
+Estilos: ms-tecnologia.css
 Interacciones: site.js
 Imágenes: assets/gesfru-*-demo.png (versiones adaptadas con datos ficticios)
 

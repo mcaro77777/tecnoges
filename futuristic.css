@@ -4,7 +4,7 @@ body{background:#080911}
 .header{background:#080a14d9;border-bottom-color:#b497ff25;box-shadow:0 8px 40px #00000020}
 .mark{background:linear-gradient(145deg,#986aff40,#19152b);box-shadow:inset 0 0 16px #a17cff18,0 0 22px #8756fc18}
 .hero{position:relative;isolation:isolate;padding-top:90px;overflow:hidden;background:#080911}
-.hero-backdrop{position:absolute;inset:0 0 auto;height:940px;z-index:-2;pointer-events:none;background:#090a13 url('tecnoges-poster.jpg') center top/cover no-repeat}
+.hero-backdrop{position:absolute;inset:0 0 auto;height:940px;z-index:-2;pointer-events:none;background:#090a13 url('ms-tecnologia-poster.jpg') center top/cover no-repeat}
 .hero-backdrop video{height:100%;width:100%;object-fit:cover;object-position:center top;opacity:.9}
 .hero-backdrop:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#080911f5 0%,#080911dc 27%,#08091170 55%,#08091112 100%),linear-gradient(0deg,#080911 0%,#08091180 18%,transparent 65%)}
 .hero:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 47%,#7842ee19,transparent 45%)}
@@ -254,7 +254,7 @@ html[data-motion=paused] .writer-spark{opacity:0!important}
 .robot-lower-link{clip-path:polygon(44% 4%,48% 6%,54% 12%,72% 21%,77% 19%,83% 20%,86% 24%,87% 31%,85% 36%,81% 39%,77% 39%,72% 35%,68% 30%,49% 18%,45% 15%,42% 12%,41% 8%)}
 .robot-tool{clip-path:polygon(20% 23%,22% 20%,25% 16%,28% 12%,31% 7%,36% 4%,42% 3%,45% 2%,48% 4%,49% 8%,48% 12%,46% 15%,43% 15%,40% 13%,36% 13%,32% 16%,27% 19%,23% 22%)}
 
-/* TECNOGES engineering lab: graphite, machined edges and restrained coral light. */
+/* MS TECNOLOGÍA engineering lab: graphite, machined edges and restrained coral light. */
 :root { --bg: #0b0e12; --panel: #141a21; --muted: #adb6c2; --purple: #e57076; --line: #a9bfd426; }
 body { background: var(--bg); }
 .header, .header.scrolled { background: #0b0f14f2; border-bottom: 1px solid #a9bfd425; box-shadow: none; }
