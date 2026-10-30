@@ -3,7 +3,7 @@
 Página principal: index.html
 Estilos: styles.css
 Interacciones: site.js
-Imágenes: assets/sisfru-*-demo.png (versiones adaptadas con datos ficticios)
+Imágenes: assets/gesfru-*-demo.png (versiones adaptadas con datos ficticios)
 
 Preparar la versión estática: node build.mjs
 Salida de publicación: dist/

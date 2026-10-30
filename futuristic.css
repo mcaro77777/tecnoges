@@ -55,10 +55,10 @@ html[data-motion=paused] *,html[data-motion=paused] *:before,html[data-motion=pa
 /* An explicit visitor action may enable the video even with reduced motion. */
 html[data-motion=running] .hero-backdrop video{visibility:visible}
 
-/* SISFRU showcase: a compact, floating 3D product stage. */
+/* GESFRU showcase: a compact, floating 3D product stage. */
 .product-section .wrap{position:relative}
 .product-tabs{position:relative;z-index:4;margin-bottom:22px;padding:7px;border:1px solid #6ed9b638;border-radius:13px;background:#06151be6;box-shadow:0 15px 35px #0004,inset 0 1px #ffffff10;backdrop-filter:blur(16px)}
-.product-tabs:before{content:'●  SISFRU / LIVE PREVIEW     7 FLUJOS CONECTADOS     CONTROL OPERACIONAL';display:block;margin:0 5px 7px;padding:2px 8px;color:#bceedd;font-size:.65rem;letter-spacing:.12em;opacity:.82}
+.product-tabs:before{content:'●  GESFRU / LIVE PREVIEW     7 FLUJOS CONECTADOS     CONTROL OPERACIONAL';display:block;margin:0 5px 7px;padding:2px 8px;color:#bceedd;font-size:.65rem;letter-spacing:.12em;opacity:.82}
 .product-tabs:before:first-letter{color:#70efb2}
 .product-tabs button{border-color:transparent;transition:transform .25s,background .25s,box-shadow .25s}.product-tabs button[aria-selected=true]{transform:translateY(-2px);box-shadow:0 7px 16px #0005,inset 0 1px #ffffff18}
 .product-view{position:relative;isolation:isolate;transform:perspective(1500px) rotateX(3deg) rotateY(-1.2deg);transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s;box-shadow:0 0 0 1px #8bf2cf22,0 0 70px #40d3a31c,0 30px 60px #0008}
@@ -66,13 +66,13 @@ html[data-motion=running] .hero-backdrop video{visibility:visible}
 .product-view:before{content:'';position:absolute;z-index:-1;inset:9px -13px -13px 13px;border-radius:14px;background:linear-gradient(135deg,#75e7bd30,#07504410 45%,#03151c);transform:translateZ(-28px);box-shadow:0 22px 30px #0008}
 .product-view:after{content:'';position:absolute;z-index:3;inset:0;pointer-events:none;border-radius:12px;background:linear-gradient(120deg,#ffffff18,transparent 14%,transparent 75%,#77eab312);mix-blend-mode:screen}
 .product-view .screen{position:relative;background:#071319;box-shadow:inset 0 0 0 1px #a6f6d715,inset 0 20px 35px #0004}
-.product-view .screen:before{content:'SISFRU  /  OPERACIÓN CONECTADA';position:absolute;z-index:2;left:20px;top:13px;color:#bcf8df;font-size:.62rem;letter-spacing:.13em;opacity:.78;text-shadow:0 0 10px #64e8b0;pointer-events:none}
+.product-view .screen:before{content:'GESFRU  /  OPERACIÓN CONECTADA';position:absolute;z-index:2;left:20px;top:13px;color:#bcf8df;font-size:.62rem;letter-spacing:.13em;opacity:.78;text-shadow:0 0 10px #64e8b0;pointer-events:none}
 .product-view .screen{max-height:560px;overflow:hidden}
 .product-view .screen img{filter:saturate(.93) contrast(1.02);transition:transform .7s ease;transform-origin:center top}.product-view:hover .screen img{transform:scale(1.012)}
 .product-caption{position:relative;z-index:4}.flow{position:relative;z-index:2}
 @keyframes pulse-live{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.2)}}
 .product-tabs:before{animation:pulse-live 2.4s ease-in-out infinite}
-@media(max-width:760px){.product-tabs{padding:5px;overflow:auto;flex-wrap:nowrap}.product-tabs:before{content:'● LIVE PREVIEW / SISFRU';white-space:nowrap;font-size:.56rem;margin-bottom:5px}.product-tabs button{white-space:nowrap;padding:9px 11px}.product-view,.product-view:hover{transform:none}.product-view:before{inset:6px -7px -8px 7px}.product-view .screen{max-height:360px}.product-view .screen:before{left:12px;top:9px;font-size:.5rem}.product-view:hover .screen img{transform:none}}
+@media(max-width:760px){.product-tabs{padding:5px;overflow:auto;flex-wrap:nowrap}.product-tabs:before{content:'● LIVE PREVIEW / GESFRU';white-space:nowrap;font-size:.56rem;margin-bottom:5px}.product-tabs button{white-space:nowrap;padding:9px 11px}.product-view,.product-view:hover{transform:none}.product-view:before{inset:6px -7px -8px 7px}.product-view .screen{max-height:360px}.product-view .screen:before{left:12px;top:9px;font-size:.5rem}.product-view:hover .screen img{transform:none}}
 @media(prefers-reduced-motion:reduce){.product-view,.product-view:hover{transform:none}.product-tabs:before{animation:none}}
 
 /* Warm technology palette inspired by the coral and burgundy reference. */
