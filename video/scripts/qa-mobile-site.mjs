@@ -9,6 +9,8 @@ const port = Number(argument("port", "9224"));
 const url = argument("url", "http://127.0.0.1:4173/");
 const output = argument("output", "video/output/qa/site-mobile-modal.png");
 const openModal = argument("open-modal", "true") !== "false";
+const viewportWidth = Number(argument("width", "390"));
+const viewportHeight = Number(argument("height", "844"));
 
 const targets = await fetch(`http://127.0.0.1:${port}/json`).then((response) => response.json());
 const target = targets.find((item) => item.type === "page");
@@ -40,12 +42,12 @@ const send = (method, params = {}) => new Promise((resolve, reject) => {
 await send("Page.enable");
 await send("Runtime.enable");
 await send("Emulation.setDeviceMetricsOverride", {
-  width: 390,
-  height: 844,
+  width: viewportWidth,
+  height: viewportHeight,
   deviceScaleFactor: 1,
   mobile: false,
-  screenWidth: 390,
-  screenHeight: 844,
+  screenWidth: viewportWidth,
+  screenHeight: viewportHeight,
 });
 await send("Page.navigate", { url });
 await new Promise((resolve) => setTimeout(resolve, 1400));

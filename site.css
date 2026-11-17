@@ -186,13 +186,13 @@ html[data-theme="dark"] .button-primary { color: #09090c; }
 .button-outline-light:hover { background: rgba(255,255,255,.14); }
 
 .hero {
-  min-height: 760px;
-  padding-top: 92px;
-  padding-bottom: 86px;
+  min-height: auto;
+  padding-top: 68px;
+  padding-bottom: 68px;
   display: grid;
-  grid-template-columns: minmax(0, .92fr) minmax(560px, 1.08fr);
+  grid-template-columns: minmax(0, 1.06fr) minmax(500px, .94fr);
   align-items: center;
-  gap: clamp(42px, 6vw, 88px);
+  gap: clamp(32px, 4vw, 64px);
   position: relative;
 }
 .hero::before {
@@ -219,21 +219,22 @@ html[data-theme="dark"] .button-primary { color: #09090c; }
 }
 .eyebrow span { width: 26px; height: 2px; border-radius: 2px; background: currentColor; }
 .hero h1 {
-  max-width: 750px;
-  margin-bottom: 26px;
+  max-width: 700px;
+  margin-bottom: 22px;
   color: var(--text-strong);
-  font-size: clamp(3rem, 4.9vw, 5rem);
-  line-height: .98;
-  letter-spacing: -.062em;
+  font-size: clamp(3rem, 3.7vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -.055em;
+  text-wrap: balance;
 }
 .hero h1 em { color: var(--primary); font-style: normal; }
-.hero-lead { max-width: 690px; margin-bottom: 14px; font-size: 1.14rem; line-height: 1.72; color: var(--text); }
-.hero-support { max-width: 660px; margin-bottom: 30px; color: var(--muted); }
+.hero-lead { max-width: 690px; margin-bottom: 14px; font-size: 1.06rem; line-height: 1.62; color: var(--text); }
+.hero-support { max-width: 660px; margin-bottom: 24px; color: var(--muted); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .trust-list {
   list-style: none;
   padding: 0;
-  margin: 34px 0 0;
+  margin: 26px 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 9px 18px;
@@ -246,7 +247,7 @@ html[data-theme="dark"] .button-primary { color: #09090c; }
 .trust-list li { display: flex; align-items: center; gap: 9px; }
 .trust-list li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--green); }
 
-.hero-visual { position: relative; padding: 26px 0 48px; }
+.hero-visual { position: relative; width: 100%; max-width: 700px; justify-self: end; padding: 16px 0 32px; }
 .product-window, .case-browser {
   overflow: hidden;
   border: 1px solid var(--border);
@@ -275,7 +276,7 @@ html[data-theme="dark"] .button-primary { color: #09090c; }
 .window-dots i:first-child { background: var(--coral); }
 .window-dots i:nth-child(2) { background: var(--warning); }
 .window-dots i:last-child { background: var(--green); }
-.product-window > img { width: 100%; aspect-ratio: 1200 / 728; object-fit: cover; object-position: top left; }
+.product-window > img { width: 100%; height: auto; aspect-ratio: 1200 / 728; object-fit: cover; object-position: top left; }
 .floating-product {
   position: absolute;
   z-index: 3;
@@ -511,6 +512,10 @@ html[data-theme="dark"] .product-badge { color: #7bd6ff; background: #153341; }
 .floating-whatsapp small { color: rgba(255,255,255,.78); font-size: .62rem; font-weight: 700; }
 .floating-whatsapp strong { font-size: .82rem; letter-spacing: .01em; }
 
+@media (min-width: 901px) {
+  .floating-whatsapp { display: none; }
+}
+
 .sofia-dialog { width: min(920px, calc(100% - 28px)); max-height: min(760px, calc(100vh - 28px)); padding: 0; overflow: auto; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); color: var(--text); box-shadow: var(--shadow-lg); }
 .sofia-dialog::backdrop { background: rgba(8,9,11,.72); backdrop-filter: blur(8px); }
 .dialog-shell { display: grid; grid-template-columns: 320px 1fr; min-height: 550px; position: relative; }
@@ -584,7 +589,7 @@ html[data-theme="dark"] .product-badge { color: #7bd6ff; background: #153341; }
   .brand-copy strong { max-width: 195px; overflow: hidden; text-overflow: ellipsis; font-size: .82rem; }
   .brand-copy small { display: none; }
   .hero { padding-top: 54px; padding-bottom: 64px; gap: 36px; }
-  .hero h1 { font-size: clamp(2.6rem, 12vw, 4rem); }
+  .hero h1 { font-size: clamp(2.35rem, 10.5vw, 3.3rem); }
   .hero-lead { font-size: 1rem; }
   .hero-actions { display: grid; }
   .button { width: 100%; }
