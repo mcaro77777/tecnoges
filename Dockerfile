@@ -1,8 +1,16 @@
+FROM node:22-alpine AS build
+
+WORKDIR /app
+
+COPY build.mjs index.html site.css site.js ./
+COPY assets/ ./assets/
+
+RUN node build.mjs
+
 FROM nginx:1.29-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY index.html ms-tecnologia.css futuristic.css gesfru-authentic.css gesfru-site.js gesfru-motion.js ms-tecnologia-hero.webm ms-tecnologia-hero.mp4 ms-tecnologia-poster.jpg /usr/share/nginx/html/
-COPY assets/ /usr/share/nginx/html/assets/
+COPY --from=build /app/dist/ /usr/share/nginx/html/
 
 EXPOSE 80
 
