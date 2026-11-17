@@ -1,0 +1,308 @@
+{
+  "provider": "elevenlabs",
+  "model": "eleven_v3",
+  "profile": "female-sofia",
+  "voiceName": "Talia - Warm Soft Guide",
+  "voiceId": "OZ0L6eISlOejga3XjDFt",
+  "voiceGender": "female",
+  "mode": "full",
+  "characters": 403,
+  "alignedDurationSeconds": 25.52,
+  "words": [
+    {
+      "word": "Hola,",
+      "start": 0,
+      "end": 0.24
+    },
+    {
+      "word": "soy",
+      "start": 0.3,
+      "end": 0.48
+    },
+    {
+      "word": "Sofía,",
+      "start": 0.54,
+      "end": 1.12
+    },
+    {
+      "word": "avatar",
+      "start": 1.177,
+      "end": 1.52
+    },
+    {
+      "word": "IA",
+      "start": 1.627,
+      "end": 1.84
+    },
+    {
+      "word": "de",
+      "start": 1.893,
+      "end": 2
+    },
+    {
+      "word": "MS",
+      "start": 2.133,
+      "end": 2.4
+    },
+    {
+      "word": "Soluciones",
+      "start": 2.46,
+      "end": 2.96
+    },
+    {
+      "word": "Tecnológicas",
+      "start": 3.024,
+      "end": 3.68
+    },
+    {
+      "word": "SpA.",
+      "start": 3.813,
+      "end": 4.4
+    },
+    {
+      "word": "Ayudamos",
+      "start": 4.613,
+      "end": 5.36
+    },
+    {
+      "word": "a",
+      "start": 5.5,
+      "end": 5.64
+    },
+    {
+      "word": "empresas",
+      "start": 5.671,
+      "end": 5.92
+    },
+    {
+      "word": "a",
+      "start": 5.96,
+      "end": 6
+    },
+    {
+      "word": "convertir",
+      "start": 6.05,
+      "end": 6.6
+    },
+    {
+      "word": "procesos",
+      "start": 6.629,
+      "end": 6.96
+    },
+    {
+      "word": "que",
+      "start": 7,
+      "end": 7.12
+    },
+    {
+      "word": "dependen",
+      "start": 7.166,
+      "end": 7.52
+    },
+    {
+      "word": "de",
+      "start": 7.547,
+      "end": 7.6
+    },
+    {
+      "word": "licencias,",
+      "start": 7.66,
+      "end": 8.4
+    },
+    {
+      "word": "planillas",
+      "start": 8.448,
+      "end": 9.04
+    },
+    {
+      "word": "o",
+      "start": 9.24,
+      "end": 9.44
+    },
+    {
+      "word": "tareas",
+      "start": 9.48,
+      "end": 9.76
+    },
+    {
+      "word": "manuales",
+      "start": 9.82,
+      "end": 10.32
+    },
+    {
+      "word": "en",
+      "start": 10.48,
+      "end": 10.8
+    },
+    {
+      "word": "sistemas",
+      "start": 10.844,
+      "end": 11.2
+    },
+    {
+      "word": "propios",
+      "start": 11.248,
+      "end": 11.68
+    },
+    {
+      "word": "que",
+      "start": 11.7,
+      "end": 11.76
+    },
+    {
+      "word": "pueden",
+      "start": 11.806,
+      "end": 12.08
+    },
+    {
+      "word": "evolucionar",
+      "start": 12.107,
+      "end": 12.64
+    },
+    {
+      "word": "con",
+      "start": 12.7,
+      "end": 12.88
+    },
+    {
+      "word": "su",
+      "start": 12.907,
+      "end": 12.96
+    },
+    {
+      "word": "operación.",
+      "start": 13.008,
+      "end": 13.68
+    },
+    {
+      "word": "También",
+      "start": 13.77,
+      "end": 14.4
+    },
+    {
+      "word": "las",
+      "start": 14.44,
+      "end": 14.56
+    },
+    {
+      "word": "acompañamos",
+      "start": 14.62,
+      "end": 15.36
+    },
+    {
+      "word": "para",
+      "start": 15.392,
+      "end": 15.52
+    },
+    {
+      "word": "incorporar",
+      "start": 15.564,
+      "end": 16
+    },
+    {
+      "word": "inteligencia",
+      "start": 16.06,
+      "end": 16.64
+    },
+    {
+      "word": "artificial",
+      "start": 16.698,
+      "end": 17.28
+    },
+    {
+      "word": "de",
+      "start": 17.333,
+      "end": 17.44
+    },
+    {
+      "word": "forma",
+      "start": 17.48,
+      "end": 17.68
+    },
+    {
+      "word": "práctica",
+      "start": 17.74,
+      "end": 18.32
+    },
+    {
+      "word": "y",
+      "start": 18.44,
+      "end": 18.56
+    },
+    {
+      "word": "controlada.",
+      "start": 18.61,
+      "end": 19.28
+    },
+    {
+      "word": "Podemos",
+      "start": 19.5,
+      "end": 20.32
+    },
+    {
+      "word": "integrar",
+      "start": 20.366,
+      "end": 20.8
+    },
+    {
+      "word": "lo",
+      "start": 20.853,
+      "end": 20.96
+    },
+    {
+      "word": "que",
+      "start": 20.98,
+      "end": 21.04
+    },
+    {
+      "word": "ya",
+      "start": 21.093,
+      "end": 21.2
+    },
+    {
+      "word": "utilizan,",
+      "start": 21.257,
+      "end": 22.24
+    },
+    {
+      "word": "migrarlo",
+      "start": 22.288,
+      "end": 22.72
+    },
+    {
+      "word": "por",
+      "start": 22.74,
+      "end": 22.8
+    },
+    {
+      "word": "etapas",
+      "start": 22.88,
+      "end": 23.44
+    },
+    {
+      "word": "o",
+      "start": 23.6,
+      "end": 23.76
+    },
+    {
+      "word": "construir",
+      "start": 23.817,
+      "end": 24.32
+    },
+    {
+      "word": "una",
+      "start": 24.36,
+      "end": 24.48
+    },
+    {
+      "word": "solución",
+      "start": 24.54,
+      "end": 24.96
+    },
+    {
+      "word": "nueva.",
+      "start": 25.027,
+      "end": 25.52
+    }
+  ]
+}

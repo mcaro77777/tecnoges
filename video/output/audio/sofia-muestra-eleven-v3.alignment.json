@@ -1,0 +1,60 @@
+{
+  "provider": "elevenlabs",
+  "model": "eleven_v3",
+  "profile": "female-sofia",
+  "mode": "sample",
+  "characters": 61,
+  "alignedDurationSeconds": 5.84,
+  "words": [
+    {
+      "word": "Hola,",
+      "start": 0,
+      "end": 0.56
+    },
+    {
+      "word": "soy",
+      "start": 0.62,
+      "end": 0.8
+    },
+    {
+      "word": "Sofía,",
+      "start": 0.86,
+      "end": 1.84
+    },
+    {
+      "word": "avatar",
+      "start": 1.909,
+      "end": 2.32
+    },
+    {
+      "word": "IA",
+      "start": 2.48,
+      "end": 2.8
+    },
+    {
+      "word": "de",
+      "start": 2.853,
+      "end": 2.96
+    },
+    {
+      "word": "MS",
+      "start": 3.173,
+      "end": 3.6
+    },
+    {
+      "word": "Soluciones",
+      "start": 3.64,
+      "end": 4.24
+    },
+    {
+      "word": "Tecnológicas",
+      "start": 4.288,
+      "end": 5.04
+    },
+    {
+      "word": "SpA.",
+      "start": 5.227,
+      "end": 5.84
+    }
+  ]
+}

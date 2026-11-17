@@ -1,397 +1,238 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="GESFRU conecta recepción, inventario, pallets, despachos y exportación. Adquiere un sistema para tu empresa frutícola, personalízalo cuando lo necesites y paga anualmente solo por su continuidad operativa.">
-<meta name="theme-color" content="#120b0e">
-<title>GESFRU | Gestión frutícola que pasa a ser tuya</title>
-<link rel="preload" as="image" href="assets/robot-arm-writer.png" fetchpriority="high">
-<link rel="preload" as="image" href="assets/gesfru-operacion-panorama.jpg" media="(min-width: 761px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/gesfru-operacion-mobile.jpg" media="(max-width: 760px)" fetchpriority="high">
-<link rel="stylesheet" href="ms-tecnologia.css?v=20261030">
-<link rel="stylesheet" href="futuristic.css?v=20261030">
-<link rel="stylesheet" href="gesfru-authentic.css?v=20261030">
-<script src="gesfru-site.js?v=20261030" defer>
-</script>
-<script src="gesfru-motion.js?v=20261030" defer>
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f9">
+  <meta name="description" content="MS Soluciones Tecnológicas SpA diseña, migra e implementa sistemas propios, automatización e inteligencia artificial aplicada para operaciones agrícolas y empresas que necesitan más control.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MS Soluciones Tecnológicas SpA | Sistemas propios e IA aplicada">
+  <meta property="og:description" content="Integra, adapta o reemplaza por etapas. Convierte tus procesos en un producto digital que puede evolucionar con tu empresa.">
+  <meta property="og:image" content="assets/gesfru-operacion-panorama.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>MS Soluciones Tecnológicas SpA | Sistemas propios e IA aplicada</title>
+  <link rel="icon" type="image/png" href="assets/ms-tecnologia-logo-256.png">
+  <link rel="apple-touch-icon" href="assets/ms-tecnologia-logo-256.png">
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('msst-theme');
+        document.documentElement.dataset.theme = saved === 'dark' ? 'dark' : 'light';
+      } catch (_) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="site.css?v=20261117b">
+  <script defer src="site.js?v=20261117b"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MS Soluciones Tecnológicas SpA",
+    "email": "mcsolucionestecno@gmail.com",
+    "telephone": "+56 9 9399 1036",
+    "description": "Desarrollo e implementación de sistemas propios, automatización e inteligencia artificial aplicada."
+  }
+  </script>
 </head>
 <body>
-<a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="header">
-<div class="wrap nav">
-<a class="brand" href="#inicio" aria-label="MS Tecnología, inicio">
-<img class="brand-logo" src="assets/ms-tecnologia-logo-256.png" width="256" height="256" alt="">MS TECNOLOGÍA</a>
-<nav class="links" id="navigation" aria-label="Navegación principal">
-<a href="#gesfru">GESFRU</a>
-<a href="#soluciones">Qué resuelve</a>
-<a href="#propiedad">Propiedad</a>
-<a href="#modelo">Cómo se compra</a>
-<a href="#contacto">Contacto</a>
-</nav>
-<a class="button small secondary" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar demo ↗</a>
-<button class="menu" aria-expanded="false" aria-controls="navigation">Menú</button>
-</div>
-</header>
-<main id="contenido">
-<section class="hero" id="inicio">
-<div class="lab-backdrop" aria-hidden="true">
-<picture>
-<source media="(max-width: 760px)" srcset="assets/gesfru-operacion-mobile.jpg">
-<img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" alt="" fetchpriority="high">
-</picture>
-<span class="lab-backdrop-noise"></span>
-</div>
-<div class="wrap">
-<div class="lab-layout">
-<div class="hero-intro">
-<p class="eyebrow">MS Tecnología presenta · GESFRU</p>
-<h1>Tu operación frutícola.<br>En un sistema que<br><span>pasa a ser tuyo.</span></h1>
-<p class="hero-copy">GESFRU conecta la operación desde la recepción de la fruta hasta su despacho y exportación. Lo adquieres para tu empresa, lo adaptas cuando lo necesitas y construyes sobre un producto que ya es tuyo.</p>
-<div class="actions">
-<a class="button" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar demo por WhatsApp ↗</a>
-<a class="button secondary" href="#gesfru">Ver GESFRU</a>
-</div>
-<a class="hero-return-link" href="#retorno">Conoce el modelo de propiedad <span aria-hidden="true">→</span></a>
-<p class="hero-note">Lo compras <span aria-hidden="true">/</span> Lo adaptas <span aria-hidden="true">/</span> Es tuyo</p>
-</div>
-<div class="lab-visual">
-<div class="lab-chrome"><span><i aria-hidden="true"></i> GESFRU / INGENIERÍA APLICADA</span><span>01 — 03</span></div>
-<div class="assembly-stage" role="img" aria-label="Un brazo robótico ensambla datos, procesos e interfaz para representar la adaptación de GESFRU a una operación frutícola.">
-<div class="stage-grid" aria-hidden="true"></div>
-<div class="stage-ring" aria-hidden="true"></div>
-<div class="stage-axis axis-x" aria-hidden="true"></div>
-<div class="stage-axis axis-y" aria-hidden="true"></div>
-<div class="stage-label" aria-hidden="true">DE TU OPERACIÓN<br><strong>A TU SISTEMA.</strong></div>
-<div class="robot-platform" aria-hidden="true"></div>
-<div class="assembly-app" aria-hidden="true">
-<div class="assembly-app-bar"><span>Tu GESFRU</span><span class="app-indicator">●</span></div>
-<div class="assembly-modules">
-<div class="assembly-module" data-module="0"><span class="module-icon">▤</span><strong>Datos</strong><span class="module-line"></span><span class="module-line short"></span></div>
-<div class="assembly-module" data-module="1"><span class="module-icon">⌘</span><strong>Procesos</strong><span class="module-line"></span><span class="module-line short"></span></div>
-<div class="assembly-module" data-module="2"><span class="module-icon">▥</span><strong>Interfaz</strong><span class="module-line"></span><span class="module-line short"></span></div>
-</div>
-<div class="app-connection"><span></span><span></span><span></span></div>
-</div>
-<div class="robot-writer assembly-robot" aria-hidden="true">
-<img class="robot-base" src="assets/robot-arm-writer.png" width="1536" height="1024" alt="">
-<div class="robot-joint robot-shoulder">
-<img class="robot-upper-link" src="assets/robot-arm-writer.png" width="1536" height="1024" alt="">
-<div class="robot-joint robot-elbow">
-<img class="robot-lower-link" src="assets/robot-arm-writer.png" width="1536" height="1024" alt="">
-<div class="robot-joint robot-wrist">
-<img class="robot-tool" src="assets/robot-arm-writer.png" width="1536" height="1024" alt="">
-<span class="writer-spark"></span>
-</div>
-</div>
-</div>
-</div>
-<div class="assembly-chip" aria-hidden="true"><span></span></div>
-<div class="assembly-source" aria-hidden="true"><span>+</span> TU OPERACIÓN</div>
-<span class="stage-coordinate" aria-hidden="true">CONFIGURAR / CONECTAR / EVOLUCIONAR</span>
-</div>
-<div class="lab-sequence" aria-hidden="true"><span class="active" data-step="0"><b>01</b> Datos</span><span data-step="1"><b>02</b> Procesos</span><span data-step="2"><b>03</b> Tu GESFRU</span></div>
-<div class="lab-controls"><p>Tu operación. Tu sistema. Tu evolución.</p></div>
-</div>
-</div>
-<div class="operation-ribbon" aria-labelledby="operation-ribbon-title">
-<div class="operation-ribbon-copy">
-<span>UNA SOLA HISTORIA DE DATOS</span>
-<strong id="operation-ribbon-title">Del campo al despacho.</strong>
-</div>
-<ol class="operation-route" aria-label="Etapas conectadas por GESFRU">
-<li><span>01</span>Recepción</li>
-<li><span>02</span>Control</li>
-<li><span>03</span>Packing</li>
-<li><span>04</span>Inventario</li>
-<li><span>05</span>Pallets</li>
-<li><span>06</span>Despacho</li>
-<li><span>07</span>Exportación</li>
-</ol>
-</div>
-</div>
-</section>
-<section class="section light" id="soluciones">
-<div class="wrap">
-<div class="section-head">
-<div>
-<p class="eyebrow">Una operación frutícola, un solo sistema</p>
-<h2>Desde la recepción hasta la exportación.<br>Sin información dispersa.</h2>
-</div>
-<p>GESFRU reúne los datos y etapas que hoy pueden estar repartidos entre planillas, documentos y herramientas separadas.</p>
-</div>
-<div class="solutions">
-<article class="solution">
-<div class="solution-image" aria-hidden="true"><img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" loading="lazy" alt=""></div>
-<span class="number">01 / TRAZABILIDAD OPERACIONAL</span>
-<h3>Sigue la fruta<br>en cada etapa.</h3>
-<p>Relaciona recepciones, pallets, inspecciones y movimientos para consultar la historia de la operación.</p>
-<ul>
-<li>Recepción y control</li>
-<li>Packing e inventario</li>
-<li>Pallets e inspecciones</li>
-</ul>
-</article>
-<article class="solution">
-<div class="solution-image" aria-hidden="true"><img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" loading="lazy" alt=""></div>
-<span class="number">02 / DESPACHO Y EXPORTACIÓN</span>
-<h3>Coordina salidas<br>con más claridad.</h3>
-<p>Centraliza despachos, mercados, documentación y antecedentes de carga.</p>
-<ul>
-<li>Guías y despachos</li>
-<li>Mercados y exportadores</li>
-<li>Documentación operacional</li>
-</ul>
-</article>
-<article class="solution">
-<div class="solution-image" aria-hidden="true"><img src="assets/gesfru-operacion-panorama.jpg" width="2034" height="773" loading="lazy" alt=""></div>
-<span class="number">03 / INFORMACIÓN PARA DECIDIR</span>
-<h3>Mira la temporada<br>completa.</h3>
-<p>Consulta indicadores, volúmenes y estados desde una visión común de la operación.</p>
-<ul>
-<li>Panel gerencial</li>
-<li>Reportes operacionales</li>
-<li>Accesos por perfil</li>
-</ul>
-</article>
-</div>
-</div>
-</section>
-<section class="section product-section" id="gesfru">
-<div class="wrap">
-<div class="section-head">
-<div>
-<p class="eyebrow green">GESFRU en acción</p>
-<h2>El producto que compras hoy.<br>La plataforma que puedes adaptar mañana.</h2>
-</div>
-<p>GESFRU parte de una base funcional para la gestión frutícola. La entrega se define para tu operación y puede evolucionar después con módulos, integraciones y mejoras solicitadas por tu empresa.</p>
-</div>
-<div class="product-tabs" role="tablist" aria-label="Pantallas de GESFRU">
-<button id="tab-panel" role="tab" aria-selected="true" aria-controls="view-panel">01 · Panel gerencial</button>
-<button id="tab-despachos" role="tab" aria-selected="false" aria-controls="view-despachos" tabindex="-1">02 · Despachos</button>
-<button id="tab-detalle" role="tab" aria-selected="false" aria-controls="view-detalle" tabindex="-1">03 · Detalle de pallets</button>
-</div>
-<div id="view-panel" class="product-view" role="tabpanel" aria-labelledby="tab-panel" tabindex="0">
-<div class="screen">
-<img src="assets/gesfru-panel-demo.png" width="1610" height="977" loading="lazy" alt="Panel gerencial de GESFRU con indicadores de demostración">
-</div>
-<div class="product-caption">
-<div>
-<h3>Una mirada a la temporada completa.</h3>
-<p>Consulta recepciones, despachos, volúmenes y mercados para seguir la actividad y orientar tus decisiones.</p>
-</div>
-<a class="text-link" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar demo de GESFRU ↗</a>
-</div>
-</div>
-<div id="view-despachos" class="product-view" role="tabpanel" aria-labelledby="tab-despachos" tabindex="0" hidden>
-<div class="screen">
-<img src="assets/gesfru-despachos-demo.png" width="1727" height="910" loading="lazy" alt="Listado de despachos con guías, estados y exportadores ficticios">
-</div>
-<div class="product-caption">
-<div>
-<h3>Despachos y documentación, conectados.</h3>
-<p>Filtra guías, revisa estados y accede a los documentos del proceso desde el listado de despachos.</p>
-</div>
-<a class="text-link" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar demo de GESFRU ↗</a>
-</div>
-</div>
-<div id="view-detalle" class="product-view" role="tabpanel" aria-labelledby="tab-detalle" tabindex="0" hidden>
-<div class="screen">
-<img src="assets/gesfru-detalle-demo.png" width="1636" height="961" loading="lazy" alt="Detalle de despacho con información logística y pallets ficticios">
-</div>
-<div class="product-caption">
-<div>
-<h3>El detalle detrás de cada despacho.</h3>
-<p>Reúne la información logística y los pallets asociados, con especie, variedad y antecedentes de la carga.</p>
-</div>
-<a class="text-link" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar demo de GESFRU ↗</a>
-</div>
-</div>
-<p class="caption-note">Vistas adaptadas de GESFRU. Empresas, identificadores y cifras ficticias para proteger la información de la operación.</p>
-<div class="flow" aria-label="Etapas de la operación">
-<span>Recepción</span>
-<span>Control</span>
-<span>Packing</span>
-<span>Inventario</span>
-<span>Pallets</span>
-<span>Despacho</span>
-<span>Exportación</span>
-</div>
-</div>
-</section>
-<section class="section" id="propiedad">
-<div class="wrap about-grid">
-<div class="about-copy">
-<p class="eyebrow">Un producto propio, con continuidad asegurada</p>
-<h2>Compra la base.<br>Adáptala a tu operación.<br>Sigue construyendo.</h2>
-<p>GESFRU no se entrega como un arriendo indefinido por derecho de uso. Tu empresa adquiere el producto bajo las condiciones definidas en la propuesta y el contrato.</p>
-<p>Después puedes solicitar cambios sobre esa misma base, sin comenzar nuevamente ni depender de una plataforma que nunca pasa a ser tuya.</p>
-</div>
-<div class="principles">
-<article class="principle">
-<span>01</span>
-<div>
-<h3>Adquieres GESFRU</h3>
-<p>La propuesta define alcance, entrega, accesos, documentación y condiciones de propiedad.</p>
-</div>
-</article>
-<article class="principle">
-<span>02</span>
-<div>
-<h3>Solicitas cambios cuando los necesitas</h3>
-<p>Nuevos módulos, integraciones y mejoras se cotizan por separado sobre tu producto.</p>
-</div>
-</article>
-<article class="principle">
-<span>03</span>
-<div>
-<h3>Mantienes la operación protegida</h3>
-<p>El plan anual cubre hosting, mantención operativa, respaldos y continuidad de la base de datos.</p>
-</div>
-</article>
-</div>
-</div>
-</section>
-<section class="section light" id="metodologia">
-<div class="wrap">
-<div class="section-head">
-<div>
-<p class="eyebrow">De GESFRU a tu operación</p>
-<h2>Una base funcional.<br>Una implementación para tu empresa.</h2>
-</div>
-<p>Partimos desde GESFRU y definimos cómo debe configurarse, entregarse y evolucionar para responder a tu operación.</p>
-</div>
-<div class="process">
-<article>
-<span class="number">01 / ENTENDER</span>
-<h3>Revisamos tu operación</h3>
-<p>Revisamos procesos, usuarios, datos y puntos de control de tu operación frutícola.</p>
-</article>
-<article>
-<span class="number">02 / DEFINIR</span>
-<h3>Acordamos la entrega</h3>
-<p>Definimos configuración, alcance, accesos, documentación y condiciones comerciales antes de comenzar.</p>
-</article>
-<article>
-<span class="number">03 / IMPLEMENTAR</span>
-<h3>Preparamos la puesta en marcha</h3>
-<p>Configuramos GESFRU, preparamos la información y acompañamos el inicio de la operación.</p>
-</article>
-<article>
-<span class="number">04 / EVOLUCIONAR</span>
-<h3>Construimos sobre lo que ya es tuyo</h3>
-<p>Los nuevos módulos, integraciones y mejoras se incorporan cuando tu empresa decide avanzar.</p>
-</article>
-</div>
-</div>
-</section>
-<section class="section" id="modelo">
-<div class="wrap">
-<div class="return-block" id="retorno">
-<div class="return-copy">
-<p class="eyebrow">Compra una vez. Construye sobre lo que ya es tuyo.</p>
-<h2>Cambia el pago indefinido<br><span>por una inversión con propiedad.</span></h2>
-<p>La adquisición e implementación de GESFRU es una inversión inicial. Las personalizaciones se cotizan solo cuando las solicitas y el cobro anual corresponde a la continuidad operativa del sistema.</p>
-<a class="button" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar una demo de GESFRU ↗</a>
-</div>
-<div class="return-card" aria-label="Resumen del modelo de inversión">
-<div class="return-metric">
-<strong class="return-word">PROPIO</strong>
-<span>GESFRU para tu empresa</span>
-</div>
-<div class="return-benefits">
-<p><span>01</span> Sin arriendo por derecho de uso</p>
-<p><span>02</span> Base sobre la cual seguir construyendo</p>
-<p><span>03</span> Personalizaciones opcionales</p>
-<p><span>04</span> Continuidad anual separada</p>
-</div>
-<small>El alcance, la entrega y las condiciones de propiedad se detallan en la propuesta y el contrato.</small>
-</div>
-</div>
-<div class="commercial">
-<div class="commercial-copy">
-<p class="eyebrow">Tres conceptos. Costos claros.</p>
-<h2>Producto, evolución y continuidad.<br>Cada uno por separado.</h2>
-<p>Sabes qué estás comprando, qué servicios operativos se renuevan y qué mejoras se cotizan únicamente cuando tu empresa decide avanzar.</p>
-<p>La anualidad mantiene GESFRU operativo y protegido; no es un cobro por el derecho a seguir usando el producto que adquiriste.</p>
-</div>
-<div class="price-box">
-<div class="price-row">
-<span>Adquisición e implementación de GESFRU</span>
-<div class="price">Inversión inicial</div>
-<p>Producto, configuración, puesta en marcha y entrega según el alcance acordado.</p>
-</div>
-<div class="price-row">
-<span>Modificaciones personalizadas</span>
-<div class="price">A solicitud</div>
-<p>Módulos, integraciones y mejoras se cotizan por separado cuando tu empresa los necesita.</p>
-</div>
-<div class="price-row">
-<span>Continuidad operativa anual</span>
-<div class="price">$300.000 <small>CLP / año</small>
-</div>
-<p>Hosting, mantención operativa, respaldos y continuidad de la base de datos, según las condiciones del plan.</p>
-</div>
-<p class="price-foot">El pago anual corresponde a servicios operativos; no es una licencia ni un arriendo de GESFRU.</p>
-</div>
-</div>
-<div class="faq">
-<h3>Antes de comenzar</h3>
-<details>
-<summary>¿Qué parte de GESFRU pasa a ser de mi empresa?</summary>
-<p>La propuesta y el contrato detallan la versión adquirida, los entregables, accesos, documentación y las condiciones aplicables al código y a componentes de terceros.</p>
-</details>
-<details>
-<summary>¿Debo seguir pagando para tener derecho a usar GESFRU?</summary>
-<p>No cobramos una licencia anual por derecho de uso. El pago anual corresponde a hosting, mantención operativa, respaldos y continuidad de la base de datos.</p>
-</details>
-<details>
-<summary>¿Puedo solicitar modificaciones después de implementarlo?</summary>
-<p>Sí. Los nuevos módulos, integraciones y mejoras se evalúan y cotizan por separado sobre la base de GESFRU que tu empresa ya adquirió.</p>
-</details>
-<details>
-<summary>¿Qué incluye exactamente el plan anual?</summary>
-<p>Incluye los servicios operativos indicados en la propuesta: hosting, mantención, respaldos y continuidad de la base de datos. Las nuevas funcionalidades se cotizan por separado.</p>
-</details>
-</div>
-</div>
-</section>
-<section class="section light" id="contacto">
-<div class="wrap contact-grid">
-<div class="contact-copy">
-<p class="eyebrow">Agenda una demo</p>
-<h2>Conversemos sobre<br>tu operación frutícola.</h2>
-<p>Cuéntanos cómo trabajan hoy y coordinemos una demo de GESFRU enfocada en sus procesos: recepción, inventario, pallets y despachos.</p>
-<div class="contact-actions">
-<a class="button contact-whatsapp" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Agendar una demo de GESFRU por WhatsApp, abre en una pestaña nueva">Agendar demo por WhatsApp ↗</a>
-<a class="contact-email" href="mailto:mcsolucionestecno@gmail.com?subject=Solicitud%20de%20demo%20GESFRU&amp;body=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola.">mcsolucionestecno@gmail.com ↗</a>
-</div>
-<a class="contact-phone" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GESFRU%20para%20evaluar%20c%C3%B3mo%20puede%20adaptarse%20a%20nuestra%20operaci%C3%B3n%20frut%C3%ADcola." target="_blank" rel="noopener noreferrer" aria-label="Escribir al +56 9 9399 1036 por WhatsApp, abre en una pestaña nueva"><span>WhatsApp</span> +56 9 9399 1036</a>
-<p class="contact-note">El mensaje ya está escrito. Solo revísalo y envíalo.</p>
-</div>
-<aside class="contact-card" aria-labelledby="contact-card-title">
-<p class="eyebrow">Una conversación simple</p>
-<h3 id="contact-card-title">Partimos por entender tu operación.</h3>
-<p>En la demo revisamos contigo dónde GESFRU puede aportar y qué tendría sentido adaptar.</p>
-<ol class="contact-points">
-<li>Cómo gestionan hoy la temporada</li>
-<li>Dónde GESFRU puede simplificar el trabajo</li>
-<li>Cómo funciona la adquisición y continuidad anual</li>
-<li>Qué adaptaciones podría necesitar tu empresa</li>
-</ol>
-<p class="contact-card-note">Sin formularios ni registros previos.</p>
-</aside>
-</div>
-</section>
-</main>
-<footer class="footer">
-<div class="wrap footer-row">
-<a class="brand" href="#inicio">
-<img class="brand-logo" src="assets/ms-tecnologia-logo-256.png" width="256" height="256" alt="">MS TECNOLOGÍA</a>
-<p>GESFRU. Gestión frutícola que pasa a ser tuya.</p>
-<p>© <span id="year">2026</span> MS TECNOLOGÍA</p>
-</div>
-</footer>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="header-shell">
+      <a class="brand" href="#inicio" aria-label="MS Soluciones Tecnológicas SpA, inicio">
+        <img src="assets/ms-tecnologia-logo-256.png" width="48" height="48" alt="" aria-hidden="true">
+        <span class="brand-copy">
+          <strong>MS Soluciones Tecnológicas</strong>
+          <small>SpA · Productos digitales propios</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menú">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav class="main-nav" id="navigation" aria-label="Navegación principal">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#producto-propio">Producto propio</a>
+        <a href="#ia">IA aplicada</a>
+        <a href="#metodologia">Cómo trabajamos</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle icon-button" type="button" aria-pressed="false" aria-label="Activar modo oscuro">
+          <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.2 15.7A8.5 8.5 0 0 1 8.3 3.8 8.5 8.5 0 1 0 20.2 15.7Z"/></svg>
+        </button>
+        <a class="button button-small button-whatsapp" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20evaluar%20mi%20sistema%20actual%20con%20MS%20Soluciones%20Tecnol%C3%B3gicas%20SpA." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp al +56 9 9399 1036">WhatsApp · +56 9 9399 1036</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Productos propios · Automatización · IA aplicada</p>
+        <h1 id="hero-title">Tu operación no tiene por qué seguir <em>arrendando</em> un sistema que nunca termina de adaptarse.</h1>
+        <p class="hero-lead">En <strong>MS Soluciones Tecnológicas SpA</strong> diseñamos, migramos e implementamos sistemas propios para empresas que necesitan más control sobre sus procesos, datos y evolución tecnológica.</p>
+        <p class="hero-support">Integramos lo que ya utilizas, lo reemplazamos por etapas o construimos sobre productos que ya están en funcionamiento.</p>
+        <div class="hero-actions">
+          <a class="button button-whatsapp" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20evaluar%20mi%20sistema%20actual%20con%20MS%20Soluciones%20Tecnol%C3%B3gicas%20SpA." target="_blank" rel="noopener noreferrer">Conversemos por WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="#soluciones">Ver soluciones implementadas</a>
+        </div>
+        <ul class="trust-list" aria-label="Servicios incluidos en nuestro acompañamiento">
+          <li>Diagnóstico</li><li>Migración</li><li>Implementación</li><li>Capacitación</li><li>Evolución</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Sistemas de demostración desarrollados por MS Soluciones Tecnológicas SpA">
+        <div class="product-window">
+          <div class="window-bar">
+            <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>GESFRU · Panel de demostración</span><b>Operación conectada</b>
+          </div>
+          <img src="assets/gesfru-panel-web.jpg" width="1200" height="728" alt="Panel gerencial de GESFRU con datos ficticios de demostración">
+        </div>
+        <div class="floating-product floating-crm"><span class="floating-icon accent-purple" aria-hidden="true">AI</span><div><small>Nexora CRM</small><strong>Agente IA activo</strong></div><i class="status-dot" aria-hidden="true"></i></div>
+        <div class="floating-product floating-stock"><span class="floating-icon accent-green" aria-hidden="true">↗</span><div><small>ControlStock 360</small><strong>Inventario bajo control</strong></div></div>
+        <p class="demo-note">Pantalla adaptada con datos ficticios para proteger la operación real.</p>
+      </div>
+    </section>
+
+    <section class="sofia-strip section-shell reveal" aria-labelledby="sofia-title">
+      <div class="sofia-avatar-wrap">
+        <div class="sofia-orbit" aria-hidden="true"></div>
+        <img src="assets/sofia-avatar-600.png" width="600" height="600" alt="Sofía, avatar de inteligencia artificial de MS Soluciones Tecnológicas SpA">
+        <span class="sofia-label">Sofía · avatar IA</span>
+      </div>
+      <div class="sofia-copy">
+        <p class="eyebrow"><span></span> Tecnología con acompañamiento</p>
+        <h2 id="sofia-title">Conoce cómo transformamos procesos en soluciones que tu empresa puede controlar.</h2>
+        <p>Sofía explica nuestro modelo en menos de treinta segundos: partir desde lo que ya utilizas, definir un camino realista e incorporar automatización donde aporta valor.</p>
+        <button class="button button-primary" type="button" data-open-sofia>Conoce cómo trabajamos <span aria-hidden="true">▶</span></button>
+      </div>
+      <div class="sofia-points" aria-label="Principios de trabajo"><span><b>01</b> Entender antes de construir</span><span><b>02</b> Migrar sin detener la operación</span><span><b>03</b> Automatizar con control humano</span></div>
+    </section>
+
+    <section class="section section-soft" id="desafio" aria-labelledby="desafio-title">
+      <div class="section-shell">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow"><span></span> Cuando el software no avanza contigo</p>
+          <h2 id="desafio-title">Ya tienes un sistema. Pero una parte importante de la operación sigue ocurriendo fuera de él.</h2>
+          <p>Antes de proponer un reemplazo, revisamos si conviene integrar, adaptar o migrar por etapas.</p>
+        </div>
+        <div class="pain-grid">
+          <article class="pain-card reveal"><span class="card-number">01</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 19V5h14v14H5Zm4-4 2-2 2 2 3-4"/></svg><h3>Costos que crecen</h3><p>Licencias por usuario, módulos adicionales y servicios que no siempre evolucionan con tus prioridades.</p></article>
+          <article class="pain-card reveal"><span class="card-number">02</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h7v5H4zM13 12h7v5h-7zM11 9h2m-1 0v3"/></svg><h3>Información fragmentada</h3><p>Datos repartidos entre el sistema, Excel, correos y WhatsApp dificultan la trazabilidad y el control.</p></article>
+          <article class="pain-card reveal"><span class="card-number">03</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18"/></svg><h3>Adaptaciones limitadas</h3><p>La empresa termina ajustándose al producto del proveedor, en vez de tener tecnología alineada con su operación.</p></article>
+          <article class="pain-card reveal"><span class="card-number">04</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg><h3>Trabajo manual invisible</h3><p>Tareas repetitivas, revisiones y respuestas siguen dependiendo de personas aunque podrían asistirse o automatizarse.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="producto-propio" aria-labelledby="producto-title">
+      <div class="section-shell">
+        <div class="section-heading split reveal">
+          <div><p class="eyebrow"><span></span> Un sistema que puede evolucionar contigo</p><h2 id="producto-title">De una licencia genérica a un producto digital diseñado para tu operación.</h2></div>
+          <p>El alcance, la entrega y las condiciones de propiedad se definen en la propuesta y el contrato. Infraestructura, soporte y servicios externos se presentan por separado y con transparencia.</p>
+        </div>
+        <div class="route-grid">
+          <article class="route-card reveal"><span class="route-icon">01</span><h3>Integrar</h3><p>Conectamos tu sistema actual con nuevos reportes, automatizaciones, canales o servicios de inteligencia artificial.</p><small>Conserva lo que ya funciona</small></article>
+          <article class="route-card featured reveal"><span class="route-icon">02</span><h3>Adaptar</h3><p>Partimos desde una solución existente y la configuramos para los procesos, perfiles y reglas de tu empresa.</p><small>Reduce el tiempo de partida</small></article>
+          <article class="route-card reveal"><span class="route-icon">03</span><h3>Construir o migrar</h3><p>Creamos una plataforma y trasladamos la información por etapas, procurando continuidad operacional.</p><small>Avanza con una hoja de ruta</small></article>
+        </div>
+        <div class="comparison reveal" aria-label="Comparación entre software arrendado y producto propio">
+          <div class="comparison-column muted"><span class="comparison-tag">Software arrendado</span><h3>Pagas por usar la plataforma del proveedor.</h3><ul class="check-list negative"><li>Costos que pueden aumentar por usuario o módulo</li><li>Adaptaciones sujetas a prioridades externas</li><li>Procesos propios que quedan fuera del sistema</li><li>Dependencia de una plataforma genérica</li></ul></div>
+          <div class="comparison-arrow" aria-hidden="true">→</div>
+          <div class="comparison-column owned"><span class="comparison-tag">Producto propio</span><h3>Inviertes en una solución con alcance definido.</h3><ul class="check-list"><li>Condiciones de propiedad establecidas por contrato</li><li>Evolución según las prioridades de tu empresa</li><li>Posibilidad de integrar sistemas y datos existentes</li><li>Costos operativos identificados y transparentes</li></ul></div>
+        </div>
+        <p class="transparency-note reveal"><strong>Transparencia:</strong> un producto propio también requiere operación responsable. Hosting, respaldos, soporte, mensajería e IA pueden generar costos recurrentes, pero se presentan como servicios identificables y no como una dependencia artificial.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="soluciones" aria-labelledby="soluciones-title">
+      <div class="section-shell">
+        <div class="section-heading centered reveal"><p class="eyebrow"><span></span> Productos que ya están en funcionamiento</p><h2 id="soluciones-title">Experiencia construyendo sistemas para operaciones reales.</h2><p>Cuatro bases tecnológicas que demuestran capacidad operativa, integración, automatización y control.</p></div>
+        <article class="case-feature reveal">
+          <div class="case-media"><div class="case-browser"><div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>GESFRU · Despachos</span><b>Datos demo</b></div><img src="assets/gesfru-despachos-web.jpg" width="1200" height="632" loading="lazy" alt="Pantalla de demostración del proceso de despachos de GESFRU"></div></div>
+          <div class="case-copy"><div class="case-kicker"><span class="product-badge">Producto agrícola</span><span class="status-badge">Implementado</span></div><h3>GESFRU</h3><p class="case-subtitle">Gestión frutícola y trazabilidad operacional</p><p>Conecta la recepción de fruta con pallets, inspecciones, transformaciones, inventario, despachos y reportes.</p><ul class="feature-pills"><li>Recepción pallet y bins</li><li>Ciclo de vida del pallet</li><li>Reembalaje</li><li>SAG</li><li>Despachos</li><li>Dashboard y reportes</li></ul><a class="text-link" href="#contacto">Solicitar una demostración <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <div class="case-grid">
+          <article class="case-card reveal">
+            <div class="case-preview crm-preview" aria-label="Vista conceptual de un CRM conversacional"><div class="mini-sidebar"><i></i><i></i><i></i><i></i></div><div class="mini-content"><div class="mini-top"><span>Nexora</span><b>Agente conectado</b></div><div class="chat-row incoming">Hola, necesito información.</div><div class="chat-row outgoing">Claro. Te ayudo y registro tu solicitud.</div><div class="mini-status"><span></span> Oportunidad creada</div></div></div>
+            <div class="case-kicker"><span class="product-badge purple">Gestión comercial</span><span class="status-badge">Implementado</span></div><h3>Nexora CRM</h3><p class="case-subtitle">CRM conversacional con agente IA</p><p>Organiza conversaciones, contactos y oportunidades mientras un agente configurable responde y deriva a una persona cuando corresponde.</p><ul class="compact-list"><li>Mensajería y oportunidades</li><li>Agente IA configurable</li><li>Atención automática y humana</li><li>Agenda y laboratorio de pruebas</li></ul>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-preview stock-preview" aria-label="Vista conceptual de gestión de inventario"><div class="stock-metric"><small>Stock disponible</small><strong>82%</strong><i style="--value:82%"></i></div><div class="stock-row"><span>Insumos críticos</span><b class="warning">4 alertas</b></div><div class="stock-row"><span>Solicitudes aprobadas</span><b>18</b></div><div class="stock-row"><span>Capital inmovilizado</span><b>Monitoreado</b></div></div>
+            <div class="case-kicker"><span class="product-badge green">Operación e inventario</span><span class="status-badge">Implementado</span></div><h3>ControlStock 360</h3><p class="case-subtitle">Inventario, solicitudes y abastecimiento</p><p>Controla stock disponible, reservado y crítico, administra solicitudes internas y facilita el análisis de consumo y compras.</p><ul class="compact-list"><li>Ingresos y retiros</li><li>Solicitudes y aprobación</li><li>Stock crítico y cobertura</li><li>Roles, dashboard y análisis</li></ul>
+          </article>
+          <article class="case-card reveal">
+            <div class="case-preview finance-preview" aria-label="Vista conceptual de gestión financiera asistida"><div class="finance-head"><span>MiSpA IA</span><b>Asistente controlado</b></div><div class="finance-grid"><div><small>Documentos</small><strong>Clasificados</strong></div><div><small>Cartolas</small><strong>Conciliadas</strong></div></div><div class="assistant-line"><span>IA</span> “Muéstrame movimientos pendientes de revisión.”</div></div>
+            <div class="case-kicker"><span class="product-badge coral">Gestión asistida</span><span class="status-badge">Implementado</span></div><h3>MiSpA IA</h3><p class="case-subtitle">Gestión financiera y tributaria asistida</p><p>Organiza documentos y movimientos bancarios, facilita conciliaciones y permite consultar información mediante un asistente controlado.</p><ul class="compact-list"><li>Documentos tributarios</li><li>Cartolas y conciliación</li><li>Estimaciones trazables</li><li>Asistente con acceso controlado</li></ul>
+          </article>
+        </div>
+        <p class="concept-note reveal">Las mini interfaces de Nexora, ControlStock 360 y MiSpA IA son representaciones conceptuales de capacidades implementadas; no contienen información de clientes.</p>
+      </div>
+    </section>
+
+    <section class="section ai-section" id="ia" aria-labelledby="ia-title">
+      <div class="section-shell ai-layout">
+        <div class="ai-copy reveal"><p class="eyebrow"><span></span> Inteligencia artificial con propósito</p><h2 id="ia-title">IA conectada con procesos que necesitan responder, ordenar, alertar o explicar.</h2><p>No incorporamos inteligencia artificial para decorar una presentación. Definimos límites, permisos, trazabilidad y revisión humana antes de llevarla a la operación.</p>
+          <div class="ai-groups"><div><span class="status-badge">Ya implementado</span><ul class="check-list"><li>Agentes que responden y registran oportunidades</li><li>Derivación segura hacia una persona</li><li>Asistentes con herramientas internas autorizadas</li><li>Clasificación y conciliación asistida</li><li>Laboratorio de pruebas antes de activar un agente</li></ul></div><div><span class="status-badge integrable">Disponible para integrar</span><ul class="check-list"><li>Consultas de stock, pallets o estados en lenguaje natural</li><li>Resúmenes diarios de recepción y despacho</li><li>Alertas de inconsistencias o procesos pendientes</li><li>Lectura de documentos y generación guiada de reportes</li><li>Asistentes internos para capacitación</li></ul></div></div>
+        </div>
+        <div class="ai-visual reveal"><img class="ai-main-image" src="assets/cinematic/smart-operations.webp" width="1600" height="900" loading="lazy" alt="Operación agrícola apoyada por tecnología y análisis de datos"><div class="ai-overlay-card"><span>Control humano</span><strong>Automatizar no significa perder el control.</strong><small>Permisos · Registro · Confirmación · Trazabilidad</small></div><div class="robot-symbol"><img src="assets/robot-arm-web.jpg" width="720" height="480" loading="lazy" alt="Brazo robótico como símbolo de automatización"><span>Automatización aplicada</span></div></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="metodologia" aria-labelledby="metodologia-title">
+      <div class="section-shell">
+        <div class="method-intro reveal"><div><p class="eyebrow"><span></span> Tecnología con acompañamiento</p><h2 id="metodologia-title">No entregamos solamente código. Acompañamos el cambio hasta que la solución funciona en la operación.</h2></div><img src="assets/cinematic/operations-team.webp" width="1600" height="900" loading="lazy" alt="Equipo revisando datos y acompañando una implementación tecnológica"></div>
+        <ol class="method-grid"><li class="method-card reveal"><span>01</span><h3>Entender</h3><p>Revisamos procesos, usuarios, sistemas actuales, datos, costos y puntos críticos.</p></li><li class="method-card reveal"><span>02</span><h3>Definir</h3><p>Acordamos qué conviene integrar, adaptar o reemplazar, junto con alcance y etapas.</p></li><li class="method-card reveal"><span>03</span><h3>Preparar</h3><p>Diseñamos la solución, configuramos ambientes y planificamos la migración.</p></li><li class="method-card reveal"><span>04</span><h3>Implementar</h3><p>Validamos los flujos, ponemos en marcha el sistema y capacitamos a las personas.</p></li><li class="method-card reveal"><span>05</span><h3>Acompañar</h3><p>Apoyamos la adopción, resolvemos ajustes y verificamos la continuidad operacional.</p></li><li class="method-card reveal"><span>06</span><h3>Evolucionar</h3><p>Incorporamos módulos, integraciones o automatizaciones cuando decides avanzar.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section" id="preguntas" aria-labelledby="preguntas-title">
+      <div class="section-shell faq-layout">
+        <div class="faq-intro reveal"><p class="eyebrow"><span></span> Antes de comenzar</p><h2 id="preguntas-title">Preguntas de una empresa que ya tiene sistema.</h2><p>La primera decisión no es qué tecnología comprar, sino qué conviene conservar, conectar y mejorar.</p><a class="text-link" href="#contacto">Conversar sobre mi caso <span aria-hidden="true">↗</span></a></div>
+        <div class="faq-list reveal">
+          <details><summary>¿Debo reemplazar inmediatamente mi sistema actual?<span aria-hidden="true">+</span></summary><p>No. Primero evaluamos si conviene integrarlo, complementarlo o realizar una migración progresiva. El objetivo es proteger la continuidad de la operación.</p></details>
+          <details><summary>¿Se pueden migrar nuestros datos?<span aria-hidden="true">+</span></summary><p>Sí, después de revisar su estructura, calidad y disponibilidad. La estrategia y las validaciones se definen antes de comenzar.</p></details>
+          <details><summary>¿Qué parte del sistema pasa a ser de nuestra empresa?<span aria-hidden="true">+</span></summary><p>Depende del producto, personalizaciones y modalidad acordada. Código, documentación, accesos y condiciones de propiedad quedan establecidos en la propuesta y el contrato.</p></details>
+          <details><summary>¿Significa que no existirán costos recurrentes?<span aria-hidden="true">+</span></summary><p>No necesariamente. Hosting, respaldos, soporte, mensajería, almacenamiento e IA pueden tener costos operativos. Se presentan de forma separada y transparente.</p></details>
+          <details><summary>¿Pueden conectarse con sistemas existentes?<span aria-hidden="true">+</span></summary><p>Sí, cuando disponen de APIs, exportaciones u otros mecanismos técnicamente viables y autorizados.</p></details>
+          <details><summary>¿La inteligencia artificial puede actuar sin supervisión?<span aria-hidden="true">+</span></summary><p>Solo en las tareas y límites definidos. Las operaciones sensibles pueden exigir confirmación, permisos, registro de actividad y revisión humana.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="contacto" aria-labelledby="contacto-title">
+      <div class="section-shell cta-shell reveal">
+        <div><p class="eyebrow light"><span></span> Empecemos por entender tu operación</p><h2 id="contacto-title">Evaluemos si conviene integrar, adaptar o reemplazar tu sistema actual.</h2><p>Cuéntanos qué plataforma utilizas, qué pagos mantiene y qué procesos todavía dependen de planillas o trabajo manual.</p></div>
+        <div class="cta-actions"><a class="button button-light" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20evaluar%20mi%20sistema%20actual%20y%20conocer%20las%20soluciones%20de%20MS%20Soluciones%20Tecnol%C3%B3gicas%20SpA." target="_blank" rel="noopener noreferrer">Solicitar diagnóstico por WhatsApp <span aria-hidden="true">↗</span></a><a class="button button-outline-light" href="mailto:mcsolucionestecno@gmail.com?subject=Evaluaci%C3%B3n%20de%20sistema%20actual%20-%20MS%20Soluciones%20Tecnol%C3%B3gicas%20SpA&amp;body=Hola%2C%20quiero%20conversar%20sobre%20nuestro%20sistema%20actual%20y%20evaluar%20alternativas%20de%20integraci%C3%B3n%2C%20adaptaci%C3%B3n%20o%20migraci%C3%B3n.">Escribir por correo</a><small>Sin formularios extensos. Primero entendemos el problema y luego proponemos un camino.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-grid"><a class="brand footer-brand" href="#inicio" aria-label="MS Soluciones Tecnológicas SpA, volver al inicio"><img src="assets/ms-tecnologia-logo-256.png" width="44" height="44" alt="" aria-hidden="true"><span class="brand-copy"><strong>MS Soluciones Tecnológicas</strong><small>SpA</small></span></a><p>Sistemas propios, automatización e inteligencia artificial aplicada con acompañamiento cercano.</p><div class="footer-contact"><a href="mailto:mcsolucionestecno@gmail.com">mcsolucionestecno@gmail.com</a><a href="https://wa.me/56993991036?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20MS%20Soluciones%20Tecnol%C3%B3gicas%20SpA." target="_blank" rel="noopener noreferrer">+56 9 9399 1036</a></div></div>
+    <div class="section-shell footer-bottom"><span>© <span id="year">2026</span> MS Soluciones Tecnológicas SpA</span><span>Chile · Desarrollo de productos digitales</span></div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/56993991036?text=Hola%2C%20quiero%20conocer%20las%20soluciones%20de%20MS%20Soluciones%20Tecnol%C3%B3gicas%20SpA." target="_blank" rel="noopener noreferrer" aria-label="Contactar a MS Soluciones Tecnológicas SpA por WhatsApp al +56 9 9399 1036">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.4l1.3-4.7A8.5 8.5 0 1 1 20.5 11.7Z"/><path d="M8.1 7.8c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.8 1.8c.1.3.1.5-.1.7l-.7.9c-.2.2-.1.4 0 .6.5.9 1.2 1.7 2.1 2.3.8.5 1.4.7 1.7.8.3.1.5 0 .7-.2l1-1.2c.2-.2.4-.3.7-.2l1.8.9c.3.1.5.2.5.4.1.2.1 1-.3 1.9-.4.9-1.9 1.7-2.7 1.8-.7.1-1.6.2-2.6-.2-.6-.2-1.4-.5-2.4-1.1-4.2-2.5-6-6.8-6.2-7.1-.2-.4-1.5-2-.1-3.9Z"/></svg>
+    <span><small>Hablemos por WhatsApp</small><strong>+56 9 9399 1036</strong></span>
+  </a>
+
+  <dialog class="sofia-dialog" id="sofia-dialog" aria-labelledby="sofia-dialog-title" data-video-webm="assets/sofia-presentacion.webm" data-video-mp4="assets/sofia-presentacion.mp4">
+    <div class="dialog-shell">
+      <button class="dialog-close icon-button" type="button" data-close-sofia aria-label="Cerrar presentación de Sofía"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <div class="dialog-visual"><div class="sofia-dialog-orbit" aria-hidden="true"></div><img src="assets/sofia-avatar-600.png" width="600" height="600" alt="Sofía, avatar de inteligencia artificial"><span>Sofía · avatar IA</span></div>
+      <div class="dialog-copy"><p class="eyebrow"><span></span> Presentación breve</p><h2 id="sofia-dialog-title">Una solución tecnológica debe adaptarse a tu operación, no al revés.</h2><div class="sofia-video-slot" data-video-state="ready"><video id="sofia-video" controls preload="none" playsinline hidden poster="assets/sofia-presentacion-poster.jpg" aria-label="Presentación de Sofía"><track kind="captions" srclang="es" label="Español" src="assets/sofia-presentacion.es.vtt" default></video><div class="sofia-transcript" id="sofia-transcript"><p>“Hola, soy Sofía, avatar IA de MS Soluciones Tecnológicas SpA. Ayudamos a empresas a convertir procesos que dependen de licencias, planillas o tareas manuales en sistemas propios que pueden evolucionar con su operación.”</p><p>“También las acompañamos para incorporar inteligencia artificial de forma práctica y controlada. Podemos integrar lo que ya utilizan, migrarlo por etapas o construir una solución nueva.”</p></div></div><p class="dialog-note">El video se carga únicamente al abrir esta presentación. Incluye subtítulos y controles de reproducción.</p><div class="dialog-actions"><a class="button button-primary" href="#contacto" data-close-sofia>Evaluar mi sistema</a><button class="button button-secondary" type="button" data-close-sofia>Seguir explorando</button></div></div>
+    </div>
+  </dialog>
 </body>
 </html>
