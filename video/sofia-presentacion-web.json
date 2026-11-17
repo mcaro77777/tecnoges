@@ -1,292 +1,118 @@
 {
-  "schemaVersion": 1,
-  "projectId": "sofia-ms-soluciones-web-01",
-  "title": "Sofía presenta MS Soluciones Tecnológicas SpA",
-  "format": "horizontal",
+  "schemaVersion": 2,
+  "projectId": "sofia-ms-soluciones-web-02",
+  "title": "Sofía presenta las soluciones de MS Soluciones Tecnológicas SpA",
+  "status": "ready-for-web",
   "project": {
-    "id": "sofia-ms-soluciones-web-01",
-    "title": "Sofía presenta MS Soluciones Tecnológicas SpA",
-    "format": "horizontal",
-    "audience": "Empresas agrícolas y organizaciones que ya utilizan software por suscripción",
-    "goal": "Explicar en menos de treinta segundos el modelo de producto propio, acompañamiento e IA aplicada",
+    "audience": "Empresas agrícolas y organizaciones que buscan soluciones tecnológicas propias",
+    "goal": "Presentar GESFRU, ControlStock 360, Nexora CRM, MiSpA IA y el modelo de desarrollo asistido por IA",
     "destination": "Modal bajo demanda de la página comercial",
-    "estimatedDurationSeconds": 27.133,
-    "cta": "Evaluar mi sistema actual"
+    "estimatedDurationSeconds": 113.88,
+    "cta": "Evaluar mi sistema"
   },
-  "inputs": {
-    "images": [
-      {
-        "id": "sofia-reference",
-        "source": "assets/sofia-avatar-600.png",
-        "order": 1,
-        "privacyMasks": [],
-        "status": "ready"
-      }
-    ]
-  },
-  "presentationSelection": {
-    "options": [
-      {
-        "id": "female-sofia",
-        "label": "Voz femenina + avatar Sofía",
-        "voiceGender": "female",
-        "presenterIdentity": "sofia"
-      },
-      {
-        "id": "male-avatar",
-        "label": "Voz masculina + avatar masculino",
-        "voiceGender": "male",
-        "presenterIdentity": "male-custom"
-      },
-      {
-        "id": "female-voice-only",
-        "label": "Voz femenina sin avatar",
-        "voiceGender": "female",
-        "presenterIdentity": "none"
-      },
-      {
-        "id": "male-voice-only",
-        "label": "Voz masculina sin avatar",
-        "voiceGender": "male",
-        "presenterIdentity": "none"
-      }
-    ],
-    "selectedProfile": "female-sofia"
+  "source": {
+    "origin": "user-provided-final-render",
+    "pathOutsideRepository": "D:/Usuario/mcaro/Descargas/Moderniza tu negocio con MS Soluciones Tecnológicas_1080p.mp4",
+    "committed": false,
+    "reasonNotCommitted": "El original pesa más de 100 MB; el repositorio conserva solo derivados web optimizados.",
+    "durationSeconds": 113.88,
+    "width": 1920,
+    "height": 1080,
+    "fps": 25,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "bytes": 116583027
   },
   "presentation": {
-    "voice": {
-      "provider": "elevenlabs",
-      "model": "eleven_v3",
-      "gender": "female",
-      "voiceName": "Talia - Warm Soft Guide",
-      "voiceSource": "project-config-validated"
-    },
     "avatar": {
-      "enabled": true,
       "identity": "sofia",
-      "provider": "heygen",
-      "targetTotalSeconds": 27.133,
-      "appearances": [
-        {
-          "id": "full-presentation",
-          "targetSeconds": 27.133,
-          "placement": "full-frame",
-          "purpose": "Presentación y llamado a evaluar el sistema actual"
-        }
-      ]
-    }
-  },
-  "voice": {
-    "provider": "elevenlabs",
-    "voiceIdEnv": "ELEVENLABS_VOICE_ID",
-    "selectedVoice": {
-      "name": "Talia - Warm Soft Guide",
-      "voiceId": "OZ0L6eISlOejga3XjDFt",
+      "provider": "user-supplied-render",
+      "visualContinuity": "verified",
+      "background": "neutral-light"
+    },
+    "voice": {
+      "source": "embedded-in-user-provided-video",
       "gender": "female",
-      "verifiedOn": "2026-11-17",
-      "verificationSource": "https://elevenlabs.io/docs/help-center/product/voices/my-voices/what-are-default-voices",
-      "replacesEnvironmentVoice": "George (male)"
-    },
-    "modelSelection": {
-      "options": [
-        {
-          "label": "Eleven Flash v2.5",
-          "modelId": "eleven_flash_v2_5",
-          "profile": "fast-economical",
-          "rateUsdPerThousandCharacters": 0.05
-        },
-        {
-          "label": "Eleven v3",
-          "modelId": "eleven_v3",
-          "profile": "expressive",
-          "rateUsdPerThousandCharacters": 0.1
-        }
-      ],
-      "selectedModel": "eleven_v3"
-    },
-    "language": "es-CL",
-    "delivery": "femenina, adulta, cálida, cercana y profesional",
-    "generateAlignment": true
-  },
-  "presenter": {
-    "enabled": true,
-    "identity": "sofia",
-    "heygenApiKeyEnv": "HEYGEN_API_KEY",
-    "heygenAvatarIdEnv": "HEYGEN_AVATAR_ID_SOFIA_TUTORIALES",
-    "movement": "lip-sync-only",
-    "expressiveMotion": false,
-    "background": "original-neutral",
-    "transparentBackground": false
-  },
-  "providers": {
-    "elevenLabsApiKeyEnv": "ELEVENLABS_API_KEY",
-    "heyGenApiKeyEnv": "HEYGEN_API_KEY"
-  },
-  "heygen": {
-    "status": "completed-downloaded-female",
-    "avatarName": "Sofía Tutoriales",
-    "engine": "lip-sync-only",
-    "channel": "studio-web",
-    "projectId": "5b67bfc279df4d669e38458d63e1a786",
-    "resolution": "720p",
-    "movement": "lip-sync-only",
-    "expressiveMotion": false,
-    "audioPolicy": "discarded-and-replaced-with-approved-eleven-v3-master",
-    "rejectedVersion": 1,
-    "rejectionReason": "La variable ELEVENLABS_VOICE_ID apuntaba a George, una voz masculina; no cumple el perfil female-sofia.",
-    "acceptedVersion": 2,
-    "renderId": "v30584b5b8d7d4754815172ab5fba213f",
-    "sourcePath": "video/output/avatar/sofia-presentacion-heygen-source.mp4",
-    "sourceDurationSeconds": 27.12
-  },
-  "scenes": [
-    {
-      "id": "sofia-presentation",
-      "type": "avatar",
-      "text": "Hola, soy Sofía, avatar IA de MS Soluciones Tecnológicas SpA. Ayudamos a empresas a convertir procesos que dependen de licencias, planillas o tareas manuales en sistemas propios que pueden evolucionar con su operación. También las acompañamos para incorporar inteligencia artificial de forma práctica y controlada. Podemos integrar lo que ya utilizan, migrarlo por etapas o construir una solución nueva.",
-      "durationHintSeconds": 27.133,
-      "audioDurationSeconds": 25.52,
-      "avatarAppearanceId": "full-presentation",
-      "audioPath": "video/output/audio/sofia-presentacion-eleven-v3.mp3",
-      "alignmentPath": "video/output/audio/sofia-presentacion-eleven-v3.alignment.json",
-      "avatarPath": "video/output/avatar/sofia-presentacion-heygen-source.mp4",
-      "status": "ready",
-      "safeZones": {
-        "subtitles": "bottom-band",
-        "face": "center-left"
-      },
-      "notes": "Talia femenina validada con Eleven v3. El primer render con George fue rechazado; la versión aceptada es la 2 y el master reemplaza la pista de HeyGen con el audio Eleven aprobado."
+      "language": "es-CL",
+      "delivery": "cálida, cercana y profesional"
     }
-  ],
-  "timing": {
-    "audioDurationSource": "media-file",
-    "effectCueSource": "captions",
-    "tailPaddingSeconds": 1.613,
-    "maxVisualRetimePercent": 8
   },
-  "subtitleSafeZone": {
-    "mode": "outside-interactive-content",
-    "position": "bottom-band",
-    "avoidControls": true,
-    "visualQaRequired": true
+  "script": {
+    "topics": [
+      "MS Soluciones Tecnológicas",
+      "GESFRU y operación frutícola",
+      "ControlStock 360 e inventario",
+      "Nexora CRM con agente IA",
+      "MiSpA IA",
+      "IA aplicada al proceso de desarrollo",
+      "producto propio sin licencias eternas"
+    ],
+    "transcriptSource": "approved-conversation-script",
+    "subtitles": "assets/sofia-presentacion.es.vtt",
+    "captionCueCount": 33,
+    "captionTimingBasis": "pausas detectadas en el audio y segmentación del guion aprobado"
   },
-  "rendering": {
-    "engine": "ffmpeg",
-    "gl": "angle",
-    "fallbackGl": "swangle",
-    "chromeMode": "chrome-for-testing",
-    "fallbackChromeMode": "headless-shell",
-    "qaSeekMode": "accurate",
-    "criticalFrames": [1, 9, 18, 25, 26.5],
-    "criticalFrameUnit": "seconds",
-    "compareEncodedFrames": true,
-    "postComposite": {
-      "enabled": false
-    }
+  "processing": {
+    "video": {
+      "width": 1280,
+      "height": 720,
+      "fps": 25,
+      "pixelFormat": "yuv420p"
+    },
+    "audio": {
+      "channels": 2,
+      "sampleRate": 48000,
+      "integratedLufsTarget": -16,
+      "maxTruePeakDbtp": -1.5
+    },
+    "posterFrameSeconds": 81.2,
+    "posterSelection": "mirada frontal, ojos abiertos y sonrisa natural"
   },
   "qa": {
-    "audio": {
-      "enabled": true,
-      "detectSilence": true,
-      "detectClipping": true,
-      "integratedLufsTarget": -16,
-      "integratedLufsTolerance": 2,
-      "maxTruePeakDbtp": -1.5,
-      "verifyIntelligibility": true,
-      "verifySelectedVoiceAndModel": true,
-      "verifyCaptionSync": true,
-      "maxCaptionSyncDriftMs": 150
-    },
     "visual": {
-      "verifyFaceContinuity": true,
-      "verifyLipSync": true,
-      "verifySubtitleSafeZone": true,
-      "verifyNoTransparentVideo": true
-    },
-    "results": {
       "status": "passed",
-      "audio": {
-        "voice": "Talia - Warm Soft Guide",
-        "gender": "female",
-        "model": "eleven_v3",
-        "integratedLufs": -16.3,
-        "loudnessRangeLu": 2.5,
-        "mp4TruePeakDbtp": -1.5,
-        "webmTruePeakDbtp": -1.6,
-        "clippingDetected": false
-      },
-      "visual": {
-        "faceContinuity": "passed",
-        "criticalFramesReviewed": [1, 9, 18, 25, 26.5],
-        "blackFramesDetected": false
-      },
-      "captions": {
-        "format": "webvtt",
-        "cueCount": 7,
-        "coveredWords": 59,
-        "startSeconds": 0,
-        "endSeconds": 25.52,
-        "overlapsDetected": false
-      }
+      "criticalFramesReviewedSeconds": [1, 57, 81.2, 110],
+      "faceContinuity": "passed",
+      "burnedInTextDetected": false
+    },
+    "audio": {
+      "status": "passed-technical",
+      "gainAppliedDb": 2.5,
+      "mp4IntegratedLufs": -17.72,
+      "mp4TruePeakDbtp": -1.73,
+      "webmIntegratedLufs": -17.67,
+      "webmTruePeakDbtp": -1.69,
+      "clippingDetected": false
+    },
+    "captions": {
+      "format": "webvtt",
+      "language": "es",
+      "startSeconds": 0.914,
+      "endSeconds": 113.78,
+      "overlapsDetected": false
     }
-  },
-  "costEstimate": {
-    "currency": "USD",
-    "pricingCheckedOn": "2026-11-17",
-    "narrationCharacters": 403,
-    "narrationWords": 59,
-    "elevenLabsFlashV25Usd": 0.0202,
-    "elevenLabsV3Usd": 0.0403,
-    "heygenStudioAvatarIIIPhotoCreditsPerMinute": 7,
-    "heygenStudioEstimatedCreditsPerAcceptedRender": 3.16,
-    "heygenStudioEstimatedCreditsForBothRenders": 6.66,
-    "heygenStudioActualCreditsDisplayed": null,
-    "elevenLabsSampleCharacters": 61,
-    "elevenLabsGeneratedCharacters": 867,
-    "elevenLabsKnownUsd": 0.0867,
-    "heygenAvatarIIIPhotoUsd": 0.4455,
-    "heygenAvatarIVPhotoUsd": 1.0395,
-    "heygenAvatarIVStudioUsd": 2.1735,
-    "knownCostUsd": 0.0867,
-    "notes": "ElevenLabs incluye una muestra de 61 caracteres, el audio completo inicial rechazado de 403 y el audio femenino aceptado de 403. HeyGen generó dos versiones; Studio no mostró el cargo exacto. La cifra de 6,66 créditos es solo una estimación a 7 créditos/minuto y no se registra como costo real."
-  },
-  "budget": {
-    "maxUsd": 2.5,
-    "maxHeyGenCredits": 8,
-    "approval": "preapproved",
-    "previewMaxSeconds": 12
-  },
-  "authorization": {
-    "paidGenerationApproved": true,
-    "approvedAt": "2026-11-17T16:31:40.9939732-03:00",
-    "approvedScope": "Eleven v3 femenino y corrección del render web de Sofía con lip-sync, sin publicar",
-    "correctionApprovedAt": "2026-11-17T17:22:49.4469131-03:00",
-    "publishingApproved": false
   },
   "output": {
-    "width": 1280,
-    "height": 720,
-    "fps": 30,
-    "audioSampleRate": 48000,
-    "kind": "master",
-    "master": "assets/sofia-presentacion.mp4",
-    "web": "assets/sofia-presentacion.webm",
+    "mp4": "assets/sofia-presentacion.mp4",
+    "webm": "assets/sofia-presentacion.webm",
     "subtitles": "assets/sofia-presentacion.es.vtt",
     "poster": "assets/sofia-presentacion-poster.jpg",
-    "targetMaxMegabytes": 5,
-    "actualDurationSeconds": 27.133,
-    "masterBytes": 4560141,
-    "webBytes": 4657889,
-    "masterVideoCodec": "h264",
-    "masterAudioCodec": "aac",
-    "webVideoCodec": "vp9",
-    "webAudioCodec": "opus"
+    "cacheVersion": "20261117e",
+    "durationSeconds": 113.88,
+    "mp4Bytes": 18568429,
+    "webmBytes": 20047212,
+    "posterBytes": 91430,
+    "mp4VideoCodec": "h264",
+    "mp4AudioCodec": "aac",
+    "webmVideoCodec": "vp9",
+    "webmAudioCodec": "opus"
+  },
+  "credits": {
+    "consumedByThisReplacement": false,
+    "note": "El usuario suministró el render final; la integración local solo generó derivados web, póster y subtítulos."
   },
   "publishing": {
-    "youtube": {
-      "enabled": false,
-      "visibility": "private",
-      "playlistIdEnv": "YOUTUBE_PLAYLIST_ID"
-    }
+    "enabled": false
   }
 }
