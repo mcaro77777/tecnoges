@@ -50,8 +50,8 @@
     ],
     "transcriptSource": "approved-conversation-script",
     "subtitles": "assets/sofia-presentacion.es.vtt",
-    "captionCueCount": 33,
-    "captionTimingBasis": "pausas detectadas en el audio y segmentación del guion aprobado"
+    "captionCueCount": 40,
+    "captionTimingBasis": "pausas reales medidas en el audio y segmentación del guion aprobado"
   },
   "processing": {
     "video": {
@@ -88,7 +88,7 @@
     "captions": {
       "format": "webvtt",
       "language": "es",
-      "startSeconds": 0.914,
+      "startSeconds": 0.918,
       "endSeconds": 113.78,
       "overlapsDetected": false
     }
@@ -99,6 +99,7 @@
     "subtitles": "assets/sofia-presentacion.es.vtt",
     "poster": "assets/sofia-presentacion-poster.jpg",
     "cacheVersion": "20261117e",
+    "subtitleCacheVersion": "20261117f",
     "durationSeconds": 113.88,
     "mp4Bytes": 18568429,
     "webmBytes": 20047212,
